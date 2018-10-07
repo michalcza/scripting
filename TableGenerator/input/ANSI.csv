@@ -2,8 +2,6 @@ README,"ANSI DEVICE NUMBERS"
 README,"FILE CREATED: 10/1/2018 BY: MICHAL CZARNECKI"
 README,"FILE CREATED BY SCRIPT: /home/acs/scripts/pp_CSVtoASCII/ASCIITable.py NOTE: Python libraries used to create this table are not currently available within the SCADA enviroment."
 README,"ANSI standard device numbers (ANSI /IEEE Standard C37.2 Standard for Electrical Power System Device Function Numbers, Acronyms, and Contact Designations ) identifies the features of a protective device such as a relay or circuit breaker. These types of devices protect electrical systems and components from damage when an unwanted event occurs, such as an electrical fault. Device numbers are used to identify the functions of devices shown on a schematic diagram. Function descriptions are given in the standard. One physical device may correspond to one function number, for example '29 Isolating Contactor', or a single physical device may have many function numbers associated with it, such as a numerical protective relay. Suffix and prefix letters may be added to further specify the purpose and function of a device. ANSI/IEEE C37.2-2008 is one of a continuing series of revisions of the standard, which originated in 1928 as American Institute of Electrical Engineers Standard No. 26. SOURCE: https://en.wikipedia.org/wiki/ANSI_device_numbers"
-README,"#########################################"
-README,"#########################################"
 ANSI DEVICE, PROTECTIVE DEVICE DESCRIPTION
 1,Master Element
 2,Time-delay Starting or Closing Relay

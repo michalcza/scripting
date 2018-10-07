@@ -1,0 +1,736 @@
++###########+######################################################################################+
+|  README   :  S&C 6800 SERIES AUTOMATIC SWITCH CONTROL | DNP POINTS LIST FOR THE 6802 VISTA CONT  |
+|           :  ROL | THIS LIST IS BASED ON INFORMATION FROM S&C INSTRUCTION SHEET 1045-560D. DOCU  |
+|           :  MENT DOWNLOADED FROM HTTP://WWW.SANDCVISTA.COM/GLOBALASSETS/SAC-ELECTRIC/DOCUMENTS  |
+|           :  /SHAREPOINT/DOCUMENTS---ALL-DOCUMENTS/INSTRUCTION-SHEET-1045-560D.PDF ON 9/1/2018   |
++###########+######################################################################################+
+|  README   :                     FILE CREATED: 9/27/2018 BY: MICHAL CZARNECKI                     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|  README   :  FILE CREATED BY SCRIPT: /HOME/ACS/SCRIPTS/PP_CSVTOASCII/ASCIITABLE.PY NOTE: PYTHON  |
+|           :   LIBRARIES USED TO CREATE THIS TABLE ARE NOT CURRENTLY AVAILABLE WITHIN THE SCADA   |
+|           :                                     ENVIROMENT.                                      |
++###############+##################################################################################+
+|  TABLE 1  :                                  6802 STATUS POINTS                                  |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|  CODE #   :                                NAME       DEFINITION                                 |
++###########+######################################################################################+
+|     1     :           Switch 1 Open *** On when contact status is Open. Otherwise off.           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     2     :           Switch 2 Open *** On when contact status is Open. Otherwise off.           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     4     :         Switch 1 Closed *** On when contact status is Closed. Otherwise off.         |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     5     :         Switch 2 Closed *** On when contact status is Closed. Otherwise off.         |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     7     :  Switch 1 Disabled/External Local *** On when switch operation is in the Disabled s  |
+|           :  tate, this is a summary point that reports for any of these conditions: Status Poi  |
+|           :  nt 17 Battery Bad is on, or Status Point 76 LowPressure Detected is on, or Status   |
+|           :  Point 84 Switch 1 Grounded is on. When the LOCAL/REMOTE switch on the Vista switch  |
+|           :  gear rack (in the low-voltage enclosure) is set to the Local position, this point   |
+|           :  and Status Point 8will both be on. Otherwise off. The 6802 Vista Switch Control ha  |
+|           :  s no ability to command switch operation when the motor operator LOCAL/REMOTE swit  |
+|           :                           ch is set to the Local position.                           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     8     :  Switch 2 Disabled/External Local *** On when switch operation is in the Disabled s  |
+|           :  tate, this is a summary point that reports for any of these conditions: Status Poi  |
+|           :  nt 17 Battery Bad is on, or Status Point 76 LowPressure Detected is on, or Status   |
+|           :  Point 85 Switch 2 Grounded is on. When the LOCAL/REMOTE switch on the Vista switch  |
+|           :  gear rack (in the low-voltage enclosure) is set to the Local position, this point   |
+|           :  and Status Point 7will both be on. Otherwise off. The 6802 Vista Switch Control ha  |
+|           :  s no ability to command switch operation when the motor operator LOCAL/REMOTE swit  |
+|           :                           ch is set to the Local position.                           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     9     :  Automatic Operation Enabled *** On when the Automatic Operation feature is enabled  |
+|           :   using either the faceplate switch or a SCADA command for either or both switches.  |
+|           :                                    Otherwise off.                                    |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    10     :  Automatic Operation enabled for Switch 1 *** On when the Automatic Operation featu  |
+|           :  re is enabled using either the faceplate switch or a SCADA command. Otherwise off.  |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    11     :  Automatic Operation enabled for Switch 2 *** On when the Automatic Operation featu  |
+|           :  re is enabled using either the faceplate switch or a SCADA command. Otherwise off.  |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    12     :  SCADA Control Enabled *** On when the SCADA CONTROL faceplate switch is set to the  |
+|           :                            Remote position.Otherwise off.                            |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    13     :  Overcurrent Fault Detected, Switch 1 *** On when the fault-detection circuitry reg  |
+|           :  isters an OvercurrentFault condition. Off when cleared by the Fault Indicator Rese  |
+|           :  t Strategy setting configured on the Setup>General>Fault Detection screen. Also of  |
+|           :  f when manually cleared with the Clear Faults command in the LCDmenu, the Clear Fa  |
+|           :  ults button on the Setup>Site Related screen, the faceplate/screenset pre-assigned  |
+|           :   USERCOMMAND button, or the Clear any outstanding Over current Fault conditions pr  |
+|           :  esent control point. TheOvercurrent Fault condition also clears when you reinitial  |
+|           :  ize the switch control using IntelliLink Setup Software or a SCADA reset command.   |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    14     :  Overcurrent Fault Detected, Switch 2 *** As noted in Status Point 13, for Switch 2  |
+|           :                                   . Otherwise off.                                   |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    15     :  Sectionalizer Tripped, Switch 1 *** On when any Automatic Control function opens t  |
+|           :  he switch. The point is cleared when the switch is closed for any reason. It is al  |
+|           :  so cleared on reinitialization of the switch control using the setup software or w  |
+|           :            hen you change the SCADA CONTROL switch state. Otherwise off.             |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    16     :  Sectionalizer Tripped, Switch 2 *** As noted in Status Point 15, for Switch 2. Oth  |
+|           :                                     erwise off.                                      |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    17     :  Battery Bad *** On when battery replacement is required unless the switch control   |
+|           :     is operating or has recently been operating on battery power. Otherwise off.     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    18     :  Maintenance Required *** On when some form of maintenance (other than battery repl  |
+|           :  acement) is required. It is set when the battery charger stops functioning because  |
+|           :   of over voltage or when the switch open/close contacts are not mutually exclusive  |
+|           :  . This is a summary point. An inspection of other status points can determine the   |
+|           :                             exact cause. Otherwise off.                              |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    19     :  Open/Close Indication is Inconsistent, Switch 1 *** On when both contacts are clos  |
+|           :                              ed or open.Otherwise off.                               |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    20     :  Open/Close Indication is Inconsistent, Switch 2 *** On when both contacts are clos  |
+|           :                              ed or open.Otherwise off.                               |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    21     :  Ac Control Power Present *** On when ac control power is supplied to the control.   |
+|           :                                    Otherwise off.                                    |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    22     :  Failure Override Set *** On when a SCADA operator executes the Failure Override La  |
+|           :  tch-On command to let the switch be operated even if the battery is bad. The point  |
+|           :   remains on until the override is disabled using the Failure Override Latch-Off co  |
+|           :  mmand. Also, the point will go off and the Failure Override command will become di  |
+|           :  sabled after a 15-minute timeout if it was not already turned off by the Latch-Off  |
+|           :                                command.Otherwise off.                                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    23     :  Battery System Low *** On when battery voltage is low, but the switch will operate  |
+|           :                                   . Otherwise off.                                   |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    24     :  Battery Charger Problem *** On when the charging voltage applied to the battery sy  |
+|           :              stem is high and the charger is turned off. Otherwise off.              |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    25     :  Battery Test in Progress *** On when the switch control is automatically testing t  |
+|           :  he batteries at periodic intervals. During the test battery voltage fluctuates. Ot  |
+|           :                                     herwise off.                                     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    26     :  Cabinet Door Open *** On when the enclosure door is open. When the door is closed   |
+|           :  this point is cleared and all power to the faceplate LEDs is turned off. Otherwise  |
+|           :                                         off.                                         |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    27     :  Temperature Sensor Bad *** On when the temperature sensor is reading out of range.  |
+|           :   Temperature-related correction factors will not be accurate when the sensor is in  |
+|           :                               correct. Otherwise off.                                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    28     :  Phase A Overcurrent Fault, Switch 1 *** On when the fault-detection circuitry regi  |
+|           :  sters an OvercurrentFault condition. Off when cleared by the Fault Indicator Reset  |
+|           :   Strategy setting configured on theSetup>General>Fault Detection screen. Also off   |
+|           :  when manually cleared with the Clear Faults command in theLCD menu, the Clear Faul  |
+|           :  ts button on the Setup>Site Related screen, the faceplate/screen set pre-assigned   |
+|           :  USER COMMAND button, or the Clear any outstanding Overcurrent Fault conditions pre  |
+|           :  sent control point.The Overcurrent Fault condition also clears when you reinitiali  |
+|           :   ze the switch control using IntelliLink SetupSoftware or a SCADA reset command.    |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    29     :  Phase A Overcurrent Fault, Switch 2 *** As noted in Status Point 28 for Phase A, S  |
+|           :                               witch 2. Otherwise off.                                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    30     :  Phase B Overcurrent Fault, Switch 1 *** As noted in Status Point 28 for Phase B, S  |
+|           :                               witch 1. Otherwise off.                                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    31     :  Phase B Overcurrent Fault, Switch 2 *** As noted in Status Point 28 for Phase B, S  |
+|           :                               witch 2. Otherwise off.                                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    32     :  Phase C Overcurrent Fault, Switch 1 *** As noted in Status Point 28 for Phase C, S  |
+|           :                               witch 1. Otherwise off.                                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    33     :  Phase C Overcurrent Fault, Switch 2 *** As noted in Status Point 28 for Phase C, S  |
+|           :                               witch 2. Otherwise off.                                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    34     :  Overcurrent Ground Fault, Switch 1 *** As noted in Status Point 28 for ground, Swi  |
+|           :                                tch 1. Otherwise off.                                 |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    35     :  Overcurrent Ground Fault, Switch 2 *** As noted in Status Point 28 for ground, Swi  |
+|           :                                tch 2. Otherwise off.                                 |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    36     :  Loss of Voltage on Any Configured Voltage Channel, Switch 1 *** On when the voltag  |
+|           :  e sensor on a configured voltage channel shows a Loss of Voltage status. For examp  |
+|           :  le, pad-mounted gear may be configured with three voltage sensors or six voltage s  |
+|           :                                ensors. Otherwise off.                                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    37     :  Loss of Voltage on Any Configured Voltage Channel, Switch 2 *** On when the voltag  |
+|           :  e sensor on a configured voltage channel shows a Loss of Voltage status. For examp  |
+|           :  le, pad-mounted gear may be configured with three voltage sensors or six voltage s  |
+|           :                                ensors. Otherwise off.                                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    38     :  Phase A Reverse Current, Switch 1 *** On when the current on Phase A is flowing in  |
+|           :   the direction opposite to the Normal Direction setting configured in the switch c  |
+|           :  ontrol. The switch control identifies a Reverse Current condition when the voltage  |
+|           :  -current phase angle deviates more than 90 degrees from the value set during insta  |
+|           :                  llation for the unity power factor. Otherwise off.                  |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    39     :  Phase B Reverse Current, Switch 1 *** As noted in Status Point 38, for Phase B, Sw  |
+|           :                                itch 1. Otherwise off.                                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    41     :  Phase A Reverse Current, Switch 2 *** On when the current on Phase A is flowing in  |
+|           :   the direction opposite to the Normal Direction setting configured in the switch c  |
+|           :  ontrol. The switch control identifies a Reverse Current condition when the voltage  |
+|           :  -current phase angle deviates more than 90 degrees from the value set during insta  |
+|           :                  llation for the unity power factor. Otherwise off.                  |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    42     :  Phase B Reverse Current, Switch 2 *** As noted in Status Point 41, for Phase B, Sw  |
+|           :                                itch 2. Otherwise off.                                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    43     :  Phase C Reverse Current, Switch 2 *** As noted in Status Point 41, for Phase C, Sw  |
+|           :                                itch 2. Otherwise off.                                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    44     :  Switch Control Not Transfer Ready *** Active only for the reporting switch control  |
+|           :  . On when a switch operation is not consistent with the expected team operation (i  |
+|           :  .e. incomplete or manual switch operation).This point is also on if any of these s  |
+|           :  tatus points are on: Switch Disabled (Status Points 7 and 8), AutomaticOperation D  |
+|           :  isabled (Status Point 9), or Switch Position Inconsistent (Status Points 19 and 20  |
+|           :  ). This point is used in conjunction with Not All Teams Transfer Ready (Status Poi  |
+|           :  nt 45) to identify the specific team member where a problem exists. Otherwise off.  |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    45     :  Not All Teams Transfer Ready *** On when any teams in which this switch control pa  |
+|           :  rticipates are Not TransferReady (Status Point 44). This may be because of an indi  |
+|           :  vidual team member condition, team-wide conditions such as isolating a fault, team  |
+|           :   configuration or coordination problems, Restoration Prohibited (Status Point49),   |
+|           :  or the Team Logic setting is set to the Disabled state on the Team>Setup screen. I  |
+|           :  f Status Point 44 is on in one team member, Status Point 45 is also on in the othe  |
+|           :  r team members. Otherwise off.NOTE: Unless otherwise prohibited, team member contr  |
+|           :  ols revert to Standalone Sectionalizing logic whenNot Transfer Ready (this status   |
+|           :  point) is active in all teams in which that control participates, whether because   |
+|           :             of local conditions or conditions at adjacent team members.              |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    46     :  Automatic Transfer Operation in Progress *** On when any team defined in the contr  |
+|           :      ol is actively performing an Automatic Transfer operation. Otherwise off.       |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    47     :  Automatic Return to Normal Operation in Progress *** On when any team defined in t  |
+|           :    he control is actively performing a Return-to-Normal operation. Otherwise off.    |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    48     :  Setup Data Revision *** On when the configuration entries for any enabled team def  |
+|           :  ined in the control are modified. It remains on until the Team Setup parameter on   |
+|           :  the Setup>Team screen has been toggled fromStopped mode back to Running mode for a  |
+|           :       ny team where the configuration entries have been changed.Otherwise off.       |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    49     :  Restoration Prohibited by SCADA *** On when Prohibit Load Restoration Latch On (Co  |
+|           :  ntrol Point 13) is received, the IntelliTeam SG Restoration feature is disabled us  |
+|           :  ing the IntelliTeam SG>Team Summary screen,or the Automatic Restoration state is s  |
+|           :  et to Prohibited mode on the front panel. When this point is on, no switch in any   |
+|           :  team in which this switch control participates will be allowed to automatically cl  |
+|           :  ose, preventing automatic load restoration. This point is off when Prohibit Load R  |
+|           :  estoration Latch Off (control point 13) is received, the IntelliTeam SG Restoratio  |
+|           :  n feature is enabled using the IntelliTeam SG>Team Summary screen,or the Automatic  |
+|           :      Restoration state is set to Enabled mode on the front panel. Otherwise off.     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    50     :  Restoration Prohibited by Team Timer *** On when the Team Transfer Process timer e  |
+|           :  xpires in this control resulting in the Prohibit Restoration feature being enabled  |
+|           :   for at least one of the teams in which this control participates. Only the team f  |
+|           :  or which this timer has expired is prohibited from further automatic load restorat  |
+|           :  ion.This point is cleared when Prohibit Load Restoration Latch Off (Control Point   |
+|           :  13) is received, theIntelliTeam SG Restoration feature is enabled using the Intell  |
+|           :  iTeam SG>Team Summary screen, or theAutomatic Restoration state is set to Enabled   |
+|           :                       mode on the front panel. Otherwise off.                        |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    51     :  Source Loading Data is active *** On when the real-time Feeder Loading logic is ac  |
+|           :  tive and in use. This point does not indicate whether the control is using actual   |
+|           :  real-time feeder-loading data received from a DNP master or the Default Source Seg  |
+|           :                         ment Loading setting. Otherwise off.                         |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    52     :  Real-Time Load Data May be Old or Abnormal *** On when the received DNP analog out  |
+|           :  put value is less than the real-time three-phase load as sensed by the switch. It   |
+|           :  is also set if the real-time feeder-loading data have not updated within the confi  |
+|           :  gured time interval. Off when new data are received and the analog value is equal   |
+|           :              toor greater than the local measured load. Otherwise off.               |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    53     :  Team 1 in Ready *** On when the team is in the Ready to Transfer state. This point  |
+|           :   is off if the team is not in use, contains an Error condition, or the line sectio  |
+|           :                     n represented by the team contains a fault.                      |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    54     :  Team 2 in Ready *** On when the team is in the Ready to Transfer state. This point  |
+|           :   is off if the team is not in use, contains an Error condition, or the line sectio  |
+|           :                     n represented by the team contains a fault.                      |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    55     :  Team 3 in Ready *** On when the team is in the Ready to Transfer state. This point  |
+|           :   is off if the team is not in use, contains an Error condition, or the line sectio  |
+|           :                     n represented by the team contains a fault.                      |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    56     :  Team 4 in Ready *** On when the team is in the Ready to Transfer state. This point  |
+|           :   is off if the team is not in use, contains an Error condition, or the line sectio  |
+|           :                     n represented by the team contains a fault.                      |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    57     :  Team 5 in Ready *** On when the team is in the Ready to Transfer state. This point  |
+|           :   is off if the team is not in use, contains an Error condition, or the line sectio  |
+|           :                     n represented by the team contains a fault.                      |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    58     :  Team 6 in Ready *** On when the team is in the Ready to Transfer state. This point  |
+|           :   is off if the team is not in use, contains an Error condition, or the line sectio  |
+|           :                     n represented by the team contains a fault.                      |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    59     :  Team 7 in Ready *** On when the team is in the Ready to Transfer state. This point  |
+|           :   is off if the team is not in use, contains an Error condition, or the line sectio  |
+|           :                     n represented by the team contains a fault.                      |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    60     :  Team 8 in Ready *** On when the team is in the Ready to Transfer state. This point  |
+|           :   is off if the team is not in use, contains an Error condition, or the line sectio  |
+|           :                     n represented by the team contains a fault.                      |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    61     :  Loss of Voltage on Any Phase, Switch 1 *** On when voltage is off on any phase. Ot  |
+|           :                                     herwise off.                                     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    62     :  Overcurrent Fault on Any Phase, Switch 1 *** On when fault current is sensed on an  |
+|           :                               y phase. Otherwise off.                                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    63     :  Switch 1 Tripped to Lockout *** On when Switch 1 is in the Locked Out state as the  |
+|           :   result of an event. TheIntelliTeam system may begin the reconfiguration process.   |
+|           :             Off when the Close Switch 1 command is given.Otherwise off.              |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    64     :  Manual Operation Detected for Switch 1 *** On when the IntelliTeam system senses t  |
+|           :              hat the switch has been operated manually. Otherwise off.               |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    65     :  IntelliTeam Interface Module, IIM Switch 1 Switch Status Open *** Indicates the In  |
+|           :  telliTeam system has properly received the switch status. This point should always  |
+|           :                      agree with Switch 1 Open (Status Point 1).                      |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    66     :  Loss of Voltage on Any Phase, Switch 2 *** On when voltage is lost on any phase. O  |
+|           :                                    therwise off.                                     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    67     :  Overcurrent Fault on Any Phase, Switch 2 *** On when fault current is sensed on an  |
+|           :                               y phase. Otherwise off.                                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    68     :  Switch 2 Tripped to Lockout *** On when Switch 2 is in the Locked Out state as the  |
+|           :   result of an event. TheIntelliTeam system may begin the reconfiguration process.   |
+|           :             Off when the Close Switch 1 command is given.Otherwise off.              |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    69     :  Manual Operation Detected for Switch 2 *** On when the IntelliTeam system senses t  |
+|           :                 he switch has been operated manually. Otherwise off.                 |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    70     :  IntelliTeam Interface Module, IIM Switch 2 Switch Status Open *** Indicates the In  |
+|           :  telliTeam system has properly received the switch status. This point should always  |
+|           :                      agree with Switch 2 Open (Status Point 2).                      |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    71     :  Netlist Missing Runners *** On when the received runner count doesn't match the ex  |
+|           :  pected runner count. TheRapid Self Healing feature is disabled as long as this is   |
+|           :                               the case. Otherwise off.                               |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    72     :  Netlist Settings Propagation *** On when the local control is receiving Netlist re  |
+|           :  cords from either a download or through propagation. If this is a Netlist download  |
+|           :  , the status point remains on until all expected runners arrive with the new Netli  |
+|           :                                  st. Otherwise off.                                  |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    73     :  Netlist Settings accepted *** On when a new Netlist has been successfully validate  |
+|           :  d. Off when a Netlist is being downloaded or propagated. Off if the user has chang  |
+|           :    ed any team settings so they are different from the screen set. Otherwise off.    |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    74     :  Netlist Propagation Enabled *** On when the IntelliLink software screen set or SCA  |
+|           :  DA enables Netlist propagation. Otherwise off. (Starting with Revision 7.1.x, the   |
+|           :  Netlist Propagation mode is always in the Enabled state; therefore, this status po  |
+|           :                                  int is always on.)                                  |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    75     :  IntelliTeam II Mode active *** On when IntelliTeam II software is in use. Otherwis  |
+|           :                                        e off.                                        |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    76     :  Low Pressure Detected *** On when the Low Gas Pressure indicator is on. Otherwise   |
+|           :                                         off.                                         |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    78     :  Fault Interrupter Trip Indication *** On if the switchgear is equipped with fault-  |
+|           :  interrupting positions and one or more of the fault interrupting positions has a T  |
+|           :  rip indication caused by a fault. This point remains on until the tripped fault-in  |
+|           :              terrupting position(s) are manually closed. Otherwise off.              |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    79     :  IT Out of Normal Switch 1 State *** On when the switch is not in the Normally Open  |
+|           :   or Normally Closed state for the IntelliTeam system. Off when the switch is in th  |
+|           :  e Normally Open or Normally Closed state for the IntelliTeam system. Otherwise off  |
+|           :                                          .                                           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    80     :  IT Out of Normal Switch 2 State *** On when the switch is not in the Normally Open  |
+|           :   or Normally Closed state for the IntelliTeam system. Off when the switch is in th  |
+|           :  e Normally Open or Normally Closed state for the IntelliTeam system. Otherwise off  |
+|           :                                          .                                           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    81     :  Switch 1 PLI Open *** On when the switch has been opened by the Phase Loss Isolati  |
+|           :                            on (PLI) logic.Otherwise Off.                             |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    82     :  AC Power Not Present *** On when ac power is not available to the control. Otherwi  |
+|           :                                       se off.                                        |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    83     :     Battery Disconnected *** On when the battery is disconnected. Otherwise off.     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    84     :  Switch 1 Grounded *** Switch 1 contacts are in the grounded position. Otherwise of  |
+|           :                                          f.                                          |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    85     :  Switch 2 Grounded *** Switch 2 contacts are in the grounded position. Otherwise of  |
+|           :                                          f.                                          |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    86     :  Site Acceptance Test in progress *** On when SAT Script has been received and the   |
+|           :                SAT Manager issues aStart Test command. Otherwise off.                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    87     :  Site Acceptance Test: Switch 1 Closed *** On when the SAT process sees Switch 1 st  |
+|           :                                   atus as Closed.                                    |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    88     :  Site Acceptance Test: Switch 1 Open *** On when the SAT process sees Switch 1 stat  |
+|           :                                     us as Open.                                      |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    89     :  Site Acceptance Test: Test Prohibited Locally *** On when the IntelliLink screen s  |
+|           :  et locally prohibits all SATactivity. All requests issued from the SAT Manager are  |
+|           :                                ignored. Otherwise off.                               |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    90     :  Site Acceptance Test: Switch 2 Closed *** On when the SAT process sees Switch 2 st  |
+|           :                                   atus as Closed.                                    |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    91     :  Site Acceptance Test: Switch 2 Open *** On when the SAT process sees Switch 2 stat  |
+|           :                                     us as Open.                                      |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    92     :  Site Acceptance Test: Ignore Open Disconnect *** On when the SAT Manager issues an  |
+|           :                     Ignore OpenDisconnect command. Otherwise off.                    |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    93     :  Wi-Fi Is Connected *** On when a Wi-Fi connection to the control is established. O  |
+|           :                                    therwise off.                                     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    94     :  Wi-Fi Intrusion Alarm *** On when the Wi-Fi module reports a replay attack or impr  |
+|           :  oper authentication. Turned off by the user with Control Point 15, Clear Wi-Fi Int  |
+|           :                                    rusion Alarm.                                     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    95     :  Wi-Fi Disabled by SCADA *** On when Disable Wi-Fi (Control Point 17) is received.   |
+|           :  Off when Enable Wi-Fi(Control Point 18) is received. Enable/Disable Wi-Fi (Control  |
+|           :   Point 15) toggles Wi-Fi communication on and off;on when Wi-Fi is disabled and of  |
+|           :                       f when Wi-Fi is enabled. Otherwise off.                        |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    96     :  Switch 2 PLI Open *** On when the switch has been opened by the Phase Loss Isolati  |
+|           :                            on (PLI) logic.Otherwise Off.                             |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    97     :            Warning *** On when there is an active warning. Otherwise off.            |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    98     :              Alarm *** On when there is an active alarm. Otherwise off.              |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    99     :  Error *** On when there is an active error. Turned off by a user action to clear t  |
+|           :                                      he error.                                       |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    100    :  Switch 1 Phase A Loss of Voltage *** On when Switch 1 Phase A Voltage falls below   |
+|           :           the configured Loss ofVoltage Threshold setting. Otherwise off.            |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    101    :  Switch 1 Phase B Loss of Voltage *** Same as Status Point 100 for Switch 1 Phase B  |
+|           :                                          .                                           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    102    :  Switch 1 Phase C Loss of Voltage *** Same as Status Point 100 for Switch 1 Phase C  |
+|           :                                          .                                           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    103    :  Switch 2 Phase A Loss of Voltage *** Same as Status Point 100 for Switch 2 Phase A  |
+|           :                                          .                                           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    104    :  Switch 2 Phase B Loss of Voltage *** Same as Status Point 100 for Switch 2 Phase B  |
+|           :                                          .                                           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    105    :  Switch 2 Phase C Loss of Voltage *** Same as Status Point 100 for Switch 2 Phase C  |
+|           :                                          .                                           |
++###########+######################################################################################+
+|  TABLE 3  :                               6802 ANALOG INPUT POINTS                               |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|  CODE #   :                                NAME       DEFINITION                                 |
++###########+######################################################################################+
+|     1     :  90% Voltage Reference Standard *** A constant, required by protocol implementation  |
+|           :                 to conform to theRemote Terminal Unit (RTU) standard.                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     2     :  0% Voltage Reference Standard *** A constant, with a value of zero, required by pr  |
+|           :                otocol implementation to conform to the RTU standard.                 |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     3     :  Neutral Current of Switch 1 *** Taken as the vector sum of the phase currents on P  |
+|           :  hases A, B, and C.Current is measured using true RMS techniques. Each count equals  |
+|           :                                      one ampere.                                     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     4     :  Current, Phase A Switch 1 *** Single-phase true RMS current measured on Phase A. E  |
+|           :                             ach count equals one ampere.                             |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     5     :  Current, Phase B Switch 1 *** Single-phase true RMS current measured on Phase B. E  |
+|           :                             ach count equals one ampere.                             |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     6     :  Current, Phase C Switch 1 *** Single-phase true RMS current measured on Phase C. E  |
+|           :                             ach count equals one ampere.                             |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     7     :  Neutral Current of Switch 2 *** Taken as the vector sum of the phase currents on P  |
+|           :  hases A, B, and C.Current is measured using true RMS techniques. Each count equals  |
+|           :                                      one ampere.                                     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     8     :  Current, Phase A Switch 2 *** Single-phase true RMS current measured on Phase A. E  |
+|           :                             ach count equals one ampere.                             |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     9     :  Current, Phase B Switch 2 *** Single-phase true RMS current measured on Phase B. E  |
+|           :                             ach count equals one ampere.                             |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    10     :  Current, Phase C Switch 2 *** Single-phase true RMS current measured on Phase C. E  |
+|           :                             ach count equals one ampere.                             |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    15     :  Voltage, Phase A Switch 1 *** Single-phase voltage measured on Phase A of Switch 1  |
+|           :  . Voltage is measured using true RMS techniques and scaled to yield a nominal valu  |
+|           :  e of 120 Vac. Configuration of the switch control at installation provides the sca  |
+|           :  ling factors such as voltage transformer turn ratio, etc. In cases where loads are  |
+|           :   connected in a Delta (phase-to-phase) configuration, the switch control sensor co  |
+|           :  nditioning module is jumpered to yield phase-to-phase voltage readings. Voltage is  |
+|           :               reported in units of one sensor count equals 0.1 Vac RMS.              |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    16     :  Voltage, Phase B Switch 1 *** Phase-to-ground or phase-to-phase voltage (depending  |
+|           :         on setup) measured onPole B, Switch 1. Each count equals 0.1 VAC RMS.        |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    17     :  Voltage, Phase C Switch 1 *** Phase-to-ground or phase-to-phase voltage (depending  |
+|           :         on setup) measured onPole C, Switch 1. Each count equals 0.1 VAC RMS.        |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    18     :  Voltage, Phase A Switch 2 *** Phase-to-ground or phase-to-phase voltage (depending  |
+|           :         on setup) measured onPole A, Switch 2. Each count equals 0.1 VAC RMS.        |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    19     :  Voltage, Phase B Switch 2 *** Phase-to-ground or phase-to-phase voltage (depending  |
+|           :         on setup) measured onPole B, Switch 2. Each count equals 0.1 VAC RMS.        |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    20     :  Voltage, Phase C Switch 2 *** Phase-to-ground or phase-to-phase voltage (depending  |
+|           :         on setup) measured onPole C, Switch 3. Each count equals 0.1 VAC RMS.        |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    21     :         Phase Angle, on Phase A Switch 1 *** Each count equals 0.125 degree.         |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    22     :         Phase Angle, on Phase B Switch 1 *** Each count equals 0.125 degree.         |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    23     :         Phase Angle, on Phase C Switch 1 *** Each count equals 0.125 degree.         |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    24     :         Phase Angle, on Phase A Switch 2 *** Each count equals 0.125 degree.         |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    25     :         Phase Angle, on Phase B Switch 2 *** Each count equals 0.125 degree.         |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    26     :         Phase Angle, on Phase C Switch 2 *** Each count equals 0.125 degree.         |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    27     :  Single-Phase kvars, Phase A Switch 1 *** Kvars (volt-amperes, reactive) are calcul  |
+|           :  ated from single-phase trueRMS voltage and current sensor values and the respectiv  |
+|           :              e voltage-current phase angle. Each count equals one kvar.              |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    29     :     Single-Phase kvars, Phase C Switch 1 *** As noted for Analog Input Point 27.     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    30     :     Single-Phase kvars, Phase C Switch 1 *** As noted for Analog Input Point 27.     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    31     :     Single-Phase kvars, Phase B Switch 2 *** As noted for Analog Input Point 27.     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    32     :     Single-Phase kvars, Phase C Switch 2 *** As noted for Analog Input Point 27.     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    33     :               Cabinet Temperature *** In units of degrees Fahrenheit.                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    34     :  Battery Voltage *** Nominally 24 Vdc. If ac power is on, this value is updated onl  |
+|           :  y during battery testing. If ac power is off, this value is continuously updated.   |
+|           :                             One count equals 0.035 Vdc.                              |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    35     :  Single-Phase kW, Phase A Switch 1 *** Calculated using instantaneous voltage and c  |
+|           :  urrent, and the respective voltage-current phase angle. Each count equals one kW.   |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    36     :  Single-Phase kW, Phase B Switch 1 *** Calculated using instantaneous voltage and c  |
+|           :  urrent, and the respective voltage-current phase angle. Each count equals one kW.   |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    37     :  Single-Phase kW, Phase C Switch 1 *** Calculated using instantaneous voltage and c  |
+|           :  urrent, and the respective voltage-current phase angle. Each count equals one kW.   |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    38     :          Single-Phase kVA, Phase A Switch 1 *** Each count equals one kVA.           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    39     :          Single-Phase kVA, Phase B Switch 1 *** Each count equals one kVA.           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    40     :          Single-Phase kVA, Phase C Switch 1 *** Each count equals one kVA.           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    41     :  Single-Phase kW, Phase A Switch 2 *** Calculated using instantaneous voltage and c  |
+|           :  urrent, and the respective voltage-current phase angle. Each count equals one kW.   |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    42     :  Single-Phase kW, Phase B Switch 2 *** Calculated using instantaneous voltage and c  |
+|           :  urrent, and the respective voltage-current phase angle. Each count equals one kW.   |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    43     :  Single-Phase kW, Phase C Switch 2 *** Calculated using instantaneous voltage and c  |
+|           :  urrent, and the respective voltage-current phase angle. Each count equals one kW.   |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    44     :          Single-Phase kVA, Phase A Switch 2 *** Each count equals one kVA.           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    45     :          Single-Phase kVA, Phase B Switch 2 *** Each count equals one kVA.           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    46     :          Single-Phase kVA, Phase C Switch 2 *** Each count equals one kVA.           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    47     :  Total kvars Switch 1 *** Sum of kvar Phase A, kvar Phase B, and kvar Phase C. Each  |
+|           :                                  count equals1 kvar.                                 |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    48     :  Total kvars Switch 2 *** Sum of kvar Phase A, kvar Phase B, and kvar Phase C. Each  |
+|           :                                count equals one kvar.                                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    49     :  Total kW Switch 1 *** Sum of kW Phase A, kW Phase B, and kW Phase C. Each count eq  |
+|           :                                     uals one kW.                                     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    50     :  Total kW Switch 2 *** Sum of kW Phase A, kW Phase B, and kW Phase C. Each count eq  |
+|           :                                     uals one kW.                                     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    51     :  Total kVA Switch 1 *** Sum of kVA Phase A, kVA Phase B, and kVA Phase C. Each coun  |
+|           :                                   t equals one kW.                                   |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    52     :  Total kVA Switch 2 *** Sum of kVA Phase A, kVA Phase B, and kVA Phase C. Each coun  |
+|           :                                   t equals one kW.                                   |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    53     :  Average Three-Phase Current Switch 1 *** Average of Phase A current, Phase B curre  |
+|           :                nt, and Phase C current. Each count equals one ampere.                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    54     :  Average Three-Phase Current Switch 2 *** Average of Phase A current, Phase B curre  |
+|           :                nt, and Phase C current. Each count equals one ampere.                |
++###########+######################################################################################+
+|  TABLE 4  :                              6802 ANALOG OUTPUT POINTS                               |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|  CODE #   :                                NAME       DEFINITION                                 |
++###########+######################################################################################+
+|     1     :  Application Layer Confirmation Retry Time *** Time (100 to 65,535 mSec.) that the   |
+|           :  switch control will wait for an application layer confirmation to an event respons  |
+|           :               e message before resending the request for confirmation.               |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     2     :  Application Layer Confirmation Retry Count *** Number of times (0 to 10) the switc  |
+|           :  h control will send an event response message if a confirmation is not received. T  |
+|           :  his number includes the initial response. The retry count isonly in effect when th  |
+|           :                          e confirmation process is enabled.                          |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     3     :  Control Point Select Time *** During a Select-Before-Operate procedure, the time (  |
+|           :  10 to 1000 tenths of a second) allowed to elapse between receiving the Select func  |
+|           :  tion for a point and receiving the Operate function for it. If an Operate function  |
+|           :   is not received within this period, the point is de-selected; another Select func  |
+|           :                   tion is required before the point will operate.                    |
++###########+######################################################################################+
+|  TABLE 5  :                                 6802 CONTROL POINTS                                  |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|  CODE #   :                                NAME       DEFINITION                                 |
++###########+######################################################################################+
+|     1     :  Open or Close Switch 1 *** SCADA *** This command may be issued using either the S  |
+|           :  elect/Operate sequence,the Direct Operate function, or the Direct Operate without   |
+|           :         Ack function. Both Trip and Close commands are valid for this point.         |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     2     :  Open or Close Switch 2 *** SCADA *** This command may be issued using either the S  |
+|           :  elect/Operate sequence,the Direct Operate function, or the Direct Operate without   |
+|           :         Ack function. Both Trip and Close commands are valid for this point.         |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     4     :  Issue the Shots-to-Lockout command to Switch 1 *** This command may be issued usin  |
+|           :  g either the Select/Operate sequence, the Direct Operate function, or the Direct O  |
+|           :  perate without Ack function. Only a Close command is valid for this point. This co  |
+|           :  mmand is ignored and returns an error if the switch is not open or the Automatic O  |
+|           :                            peration state is not enabled.                            |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     5     :  Issue the Shots-to-Lockout command to Switch 2 *** This command may be issued usin  |
+|           :  g either the Select/Operate sequence, the Direct Operate function, or the Direct O  |
+|           :  perate without Ack function. Only a Close command is valid for this point. This co  |
+|           :  mmand is ignored and returns an error if the switch is not open or the Automatic O  |
+|           :  peration state is not enabled.NOTE: (Codes 1-5): These commands are ignored and re  |
+|           :  turn an error if a Bad Battery condition is active and the Failure Override comman  |
+|           :  d has not been issued, or the external LOCAL/REMOTE switch in the motor operator c  |
+|           :  abinet associated with the intended position is set to the Local position. These c  |
+|           :    ommands are ignored if the LOCAL/REMOTE switch is not in the Remote position.     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     6     :  Clear any outstanding Overcurrent Fault conditions present *** This command must b  |
+|           :  e issued using aPulse On request. The fault condition otherwise remains active unt  |
+|           :  il cleared by the Fault Indicator ResetStrategy setting selected on the Setup>Gene  |
+|           :       ral>Fault Detection screen or until the REMOTE/LOCAL switch is toggled.        |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     7     :  Enable/Disable Failure Override status *** This command must be issued using the L  |
+|           :  atch On/Off request in the control relay output block. This allows Open and Close   |
+|           :      commands to be processed even if the Switch NotReady condition is active.       |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     8     :  Enable/Disable Automatic Operation *** This command must be issued using the Latch  |
+|           :   On/Off request in the control relay output block. In Automatic mode, the switch c  |
+|           :  ontrol automatically opens the switch if a preconfigured recloser sequence is reco  |
+|           :  gnized after a detected fault.NOTE: The Automatic Operation state is not disabled   |
+|           :           when the faceplate REMOTE/LOCAL switch is set toLocal operation.           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     9     :        Enable/Disable Automatic Operation, Switch 1 *** See Control Point 8.         |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    10     :        Enable/Disable Automatic Operation, Switch 2 *** See Control Point 8.         |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    11     :  IntelliTeam Clear Manual Operation status *** SCADA *** A Pulse-On or Latch-On com  |
+|           :  mand is used to clear a manual operation. This allows the IntelliTeam system to re  |
+|           :  turn to the Ready state, provided the switches are in their IntelliTeam Normally O  |
+|           :                          pen or Normally Closed positions.                           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    14     :  Netlist Propagation Enable/Disable *** In the Enabled state, allows new Netlist re  |
+|           :  quests and Netlist transmissions. In the Disabled state, multiple downloads of a N  |
+|           :  etlist can be sent to a local control. (Starting with Revision 7.1.x, the Netlist   |
+|           :  Propagation mode is always in the Enabled state; therefore, this control point doe  |
+|           :                                   s not operate.)                                    |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    15     :  Wi-Fi Enable/Disable *** This command enables or disables local Wi-Fi communicatio  |
+|           :                                          n.                                          |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    16     :  Start Battery Test *** SCADA *** This command may be issued using a Pulse-On or La  |
+|           :  tch-On command. If ac power is available, the battery charger is disconnected for   |
+|           :  several minutes during the test. If ac power is not available, a brief impedance t  |
+|           :                    est is used to evaluate the battery condition.                    |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    17     :          Wi-Fi Disable *** This command disables local Wi-Fi communication.          |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    18     :           Wi-Fi Enable *** This command enables local Wi-Fi communication.           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    19     :  Wi-Fi Test *** Activates the Wi-Fi beacon transmitter for troubleshooting purposes  |
+|           :                                          .                                           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    20     :       Clear Wi-Fi Intrusion Alarm *** Clears an active Wi-Fi Intrusion alarm.        |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    21     :    Clear Errors *** Clears all error flags. Alarms and warnings are not affected.    |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    22     :  Clear Warnings *** Clears all warning flags. Errors and alarms are not affected. T  |
+|           :        he Active Warnings function will reassert in approximately one second.        |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    23     :  Clear Alarms *** Clears all alarm flags. Errors and warnings are not affected. The  |
+|           :           Active Alarms function will reassert in approximately one second.          |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    24     :    Clear OC Faults Switch 1 *** Clears the Overcurrent Fault state for Switch 1.     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    25     :    Clear OC Faults Switch 2 *** Clears the Overcurrent Fault state for Switch 2.     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    26     :  Manual Operation Status Switch 1 *** Clears the Manual Operation state for Switch   |
+|           :                                          1.                                          |
++###########+######################################################################################+
+|  TABLE 6  :                                 6802 COUNTER POINTS                                  |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|  CODE #   :                                NAME       DEFINITION                                 |
++###########+######################################################################################+
+|     1     :  Operation Count Switch 1 *** This is the number of switch operations. The counter   |
+|           :  is incremented on eachClose operation. This is a 32-bit counter and will overflow   |
+|           :                            back to zero at 4,294,967,295.                            |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     2     :  Operation Count Switch 2 *** This is the number of switch operations. The counter   |
+|           :  is incremented on eachClose operation. This is a 32-bit counter and will overflow   |
+|           :                            back to zero at 4,294,967,295.                            |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     4     :  New Coach Generated on Team *** This is the number of coach generations on the tea  |
+|           :  m. The counter is incremented on each coach generation. This is a 32-bit counter a  |
+|           :                   nd will overflow back to zero at 4,294,967,295.                    |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     5     :  Team Communication Problem *** This is the number of communication problems. The c  |
+|           :  ounter is incremented on each communication problem. This is a 32-bit counter and   |
+|           :                     will overflow back to zero at 4,294,967,295.                     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     6     :  Unexpected State Change *** This is the number of unexpected state changes. The co  |
+|           :  unter is incremented on each unexpected state change. This is a 32-bit counter and  |
+|           :                     will overflow back to zero at 4,294,967,295.                     |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     7     :  Rebuilding Coach *** This is the number of Coach Rebuild operations. The counter i  |
+|           :  s incremented on each coach rebuild operation. This is a 32-bit counter and will o  |
+|           :                        verflow back to zero at 4,294,967,295.                        |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     8     :  Error Putting Coach on the Task List *** This is the number of errors putting a co  |
+|           :  ach on the task list. The counter is incremented on each error. This is a 32-bit c  |
+|           :               ounter and will overflow back to zero at 4,294,967,295.                |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|     9     :  Error Putting Communication Entry on Task List *** This is the number of errors pu  |
+|           :  tting a communication entry on the task list. The counter is incremented on each e  |
+|           :   rror. This is a 32-bit counter and will overflow back to zero at 4,294,967,295.    |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    10     :  Error Putting Event on the Task List *** This is the number of errors putting an e  |
+|           :  vent on the task list. The counter is incremented on each error. This is a 32-bit   |
+|           :               counter and will overflow back to zero at 4,294,967,295.               |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    11     :  Error Putting Member on the Task List *** This is the number of errors putting a m  |
+|           :  ember on the task list. The counter is incremented on each error. This is a 32-bit  |
+|           :               counter and will overflow back to zero at 4,294,967,295.               |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    12     :  Resynchronize Sequence Number *** This is the number of sequence number resynchron  |
+|           :  izations. The counter is incremented on each resynchronization operation. This is   |
+|           :           a 32-bit counter and will overflow back to zero at4,294,967,295.           |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    13     :  Compact Flash Issue *** This is the number of flash memory issues. The counter is   |
+|           :  incremented on each flash memory issue. This is a 32-bit counter and will overflow  |
+|           :                            back to zero at 4,294,967,295.                            |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    14     :  Logging Overflow *** This is the number of log overflows. The counter is increment  |
+|           :  ed on each log overflow.This is a 32-bit counter and will overflow back to zero at  |
+|           :                                    4,294,967,295.                                    |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    15     :  Disk Problem *** This is the number of disk problems. The counter is incremented o  |
+|           :  n each disk problem.This is a 32-bit counter and will overflow back to zero at 4,2  |
+|           :                                     94,967,295.                                      |
++ - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+|    16     :  Wi-Fi Intrusion Attempt *** This is the number of Wi-Fi intrusion attempts. The co  |
+|           :  unter is incremented on eachWi-Fi intrusion attempt. This is a 32-bit counter and   |
+|           :                     will overflow back to zero at 4,294,967,295.                     |
++ = = = = = + = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =+
