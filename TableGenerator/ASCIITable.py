@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # CREATES 80 CHAR WIDE ASCII TABLE FROM CSV FILE WITH NEWLINE AS NEEDED IN EACH ROW
 # -*- coding: utf-8 -*-
-# import pandas
-# import beautifultable
+import pandas
+import beautifultable
 import sys
 import os
 import os.path
