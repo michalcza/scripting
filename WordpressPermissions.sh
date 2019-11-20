@@ -18,6 +18,11 @@
 exitcode=1
 # Declare variables
 pwd=/usr/share/wordpress #Assume generic install location
+# check for sudo
+if (( $EUID != 0 )); then
+    echo "Please run with sudo"
+    exit
+fi
 cd $pwd &&
 chown www-data:www-data  -R * &&
 find . -type d -exec chmod 755 {} \; &&
