@@ -1,24 +1,42 @@
 #!/usr/bin/env python
 # CREATES FIXED CHAR WIDE ASCII TABLE FROM CSV FILE WITH NEWLINE AS NEEDED IN EACH ROW
 # -*- coding: utf-8 -*-
-import pandas
-import beautifultable
-import sys
+# 10/01/2020 MICHAL CZARNECKI:  ADDED GUI FOR FILE SELECTION
+# TODO ADD SEPARATOR SELECTION CHARACTERS INTO GUI
+# TODO ERROR HANDLING
+# TODO OUTPUT AND INPUT DIRECTORIES
+#
 import os
 import os.path
+import sys
+import beautifultable
+import pandas
+import PySimpleGUI as sg
 
-def error_syntax():
-    print(" Usage syntax is $> python ASCIItable.py {input file} > {output file}")
+if len(sys.argv) == 1:
+    fname = sg.popup_get_file('CSV to open')
+
+else:
+    fname = sys.argv[1]
+
+if not fname:
+    sg.popup("Cancel", "No filename supplied")
+    raise SystemExit("Cancelling: no filename supplied")
+else:
+
+    print(fname)
+
+
 def read_success():
     print(" **** SUCCESS: INPUT FILE EXISTS AND IS READABLE, CONTINUING. ****")
+
+
 def read_error():
     print(" **** ERROR: INPUT FILE IS MISSING OR NOT READABLE, EXITING. ****")
-    error_syntax()
-    exit(1)
-def error_file():
-    print(" **** ERROR: PLEASE SPECIFY CSV FILE TO CONVERT, EXITING. ****")
-    error_syntax()
-    exit(1)
+    exit(2)
+
+
+
 def style_custom():
     my_table.left_border_char = '|'
     my_table.right_border_char = '|'
@@ -29,15 +47,17 @@ def style_custom():
     my_table.intersection_char = '+'
     my_table.column_separator_char = ':'
 
+
+def error_file():
+    pass
+
+
 try:
-    sys.argv[1:]
-    # INPUT
-    INFILE = sys.argv[1]
     # CHECK IF FILE EXISTS
-    if os.path.isfile(INFILE) and os.access(INFILE, os.R_OK):
+    if os.path.isfile(fname) and os.access(fname, os.R_OK):
         read_success()
         # CREATE TABLE
-        my_dataframe = pandas.read_csv(INFILE, skip_blank_lines=True)
+        my_dataframe = pandas.read_csv(fname, skip_blank_lines=True)
         headers = list(my_dataframe)
         lists = my_dataframe.values.tolist()
         my_table = beautifultable.BeautifulTable(max_width=100, default_padding=2)
@@ -47,10 +67,19 @@ try:
             my_table.append_row(item)
         # OUTPUT RESULTS
         style_custom()
+        #PRINT OUTPUT TO TERMINAL
         print(my_table)
-        #print >>f1, 'THIS IS WHERE WE CAN PRINT TO A FILE VERSUS BASH REDIRECT'
-        exit(1)
+        #CREATE NEW NAME FOR OUTPUT FILE
+        filename = "%s.txt" % fname
+        print(filename)
+        #WRITE TO NEW FILE
+        with open(filename, 'w') as f:
+            print(my_table, file=f)
+            f.close()
+
+        exit(0)
     else:
+        exit(0)
         read_error()
 except IndexError:
-        error_file()
+    error_file()
