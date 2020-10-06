@@ -1,0 +1,1065 @@
++TTTTTTTTTTTTTTT+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT+
+L       R       |       ANSI DEVICE NUMBER       R
+L       E       |               S                R
+L       A       |                                R
+L       D       |                                R
+L       M       |                                R
+L       E       |                                R
++---------------+--------------------------------+
+L       R       |       FILE CREATED: 10/1       R
+L       E       |       /2018 BY: MICHAL C       R
+L       A       |            ZARNECKI            R
+L       D       |                                R
+L       M       |                                R
+L       E       |                                R
++---------------+--------------------------------+
+L       R       |       FILE CREATED BY SC       R
+L       E       |       RIPT: /home/acs/sc       R
+L       A       |       ripts/pp_CSVtoASCI       R
+L       D       |       I/ASCIITable.py NO       R
+L       M       |       TE: Python librari       R
+L       E       |       es used to create        R
+L               |       this table are not       R
+L               |        currently availab       R
+L               |       le within the SCAD       R
+L               |         A enviroment.          R
++---------------+--------------------------------+
+L       R       |       ANSI standard devi       R
+L       E       |       ce numbers (ANSI /       R
+L       A       |       IEEE Standard C37.       R
+L       D       |       2 Standard for Ele       R
+L       M       |       ctrical Power Syst       R
+L       E       |       em Device Function       R
+L               |        Numbers, Acronyms       R
+L               |       , and Contact Desi       R
+L               |       gnations ) identif       R
+L               |       ies the features o       R
+L               |       f a protective dev       R
+L               |       ice such as a rela       R
+L               |       y or circuit break       R
+L               |       er. These types of       R
+L               |        devices protect e       R
+L               |       lectrical systems        R
+L               |       and components fro       R
+L               |       m damage when an u       R
+L               |       nwanted event occu       R
+L               |       rs, such as an ele       R
+L               |       ctrical fault. Dev       R
+L               |       ice numbers are us       R
+L               |       ed to identify the       R
+L               |        functions of devi       R
+L               |       ces shown on a sch       R
+L               |       ematic diagram. Fu       R
+L               |       nction description       R
+L               |       s are given in the       R
+L               |        standard. One phy       R
+L               |       sical device may c       R
+L               |       orrespond to one f       R
+L               |       unction number, fo       R
+L               |       r example '29 Isol       R
+L               |       ating Contactor',        R
+L               |       or a single physic       R
+L               |       al device may have       R
+L               |        many function num       R
+L               |       bers associated wi       R
+L               |       th it, such as a n       R
+L               |       umerical protectiv       R
+L               |       e relay. Suffix an       R
+L               |       d prefix letters m       R
+L               |       ay be added to fur       R
+L               |       ther specify the p       R
+L               |       urpose and functio       R
+L               |       n of a device. ANS       R
+L               |       I/IEEE C37.2-2008        R
+L               |       is one of a contin       R
+L               |       uing series of rev       R
+L               |       isions of the stan       R
+L               |       dard, which origin       R
+L               |       ated in 1928 as Am       R
+L               |       erican Institute o       R
+L               |       f Electrical Engin       R
+L               |       eers Standard No.        R
+L               |       26. SOURCE: https:       R
+L               |       //en.wikipedia.org       R
+L               |       /wiki/ANSI_device_       R
+L               |            numbers             R
++---------------+--------------------------------+
+L       A       |        PROTECTIVE DEVICE       R
+L       N       |           DESCRIPTION          R
+L       S       |                                R
+L       I       |                                R
+L               |                                R
+L       D       |                                R
+L       E       |                                R
+L       V       |                                R
+L       I       |                                R
+L       C       |                                R
+L       E       |                                R
++---------------+--------------------------------+
+L       1       |         Master Element         R
++---------------+--------------------------------+
+L       2       |       Time-delay Startin       R
+L               |       g or Closing Relay       R
++---------------+--------------------------------+
+L       3       |       Checking or Interl       R
+L               |          ocking Relay          R
++---------------+--------------------------------+
+L       4       |        Master Contactor        R
++---------------+--------------------------------+
+L       5       |        Stopping Device         R
++---------------+--------------------------------+
+L       6       |       Starting Circuit B       R
+L               |             reaker             R
++---------------+--------------------------------+
+L       7       |       Rate of Change Rel       R
+L               |               ay               R
++---------------+--------------------------------+
+L       8       |       Control Power Disc       R
+L               |        onnecting Device        R
++---------------+--------------------------------+
+L       9       |        Reversing Device        R
++---------------+--------------------------------+
+L       1       |       Unit Sequence Swit       R
+L       0       |               ch               R
++---------------+--------------------------------+
+L       1       |       Multifunction Devi       R
+L       1       |               ce               R
++---------------+--------------------------------+
+L       1       |        Overspeed Device        R
+L       2       |                                R
++---------------+--------------------------------+
+L       1       |       Synchronous-Speed        R
+L       3       |             Device             R
++---------------+--------------------------------+
+L       1       |       Underspeed Device        R
+L       4       |                                R
++---------------+--------------------------------+
+L       1       |       Speed or Frequency       R
+L       5       |         Matching Device        R
++---------------+--------------------------------+
+L       1       |       Data Communication       R
+L       6       |            s Device            R
++---------------+--------------------------------+
+L       1       |       Shunting or Discha       R
+L       7       |           rge Switch           R
++---------------+--------------------------------+
+L       1       |       Accelerating or De       R
+L       8       |       celerating Device        R
++---------------+--------------------------------+
+L       1       |       Starting-to-Runnin       R
+L       9       |       g Transition Conta       R
+L               |              ctor              R
++---------------+--------------------------------+
+L       2       |       Electrically-Opera       R
+L       0       |           ted Valve            R
++---------------+--------------------------------+
+L       2       |         Distance Relay         R
+L       1       |                                R
++---------------+--------------------------------+
+L       2       |        Ground Distance         R
+L       1       |                                R
+L       G       |                                R
++---------------+--------------------------------+
+L       2       |         Phase Distance         R
+L       1       |                                R
+L       P       |                                R
++---------------+--------------------------------+
+L       2       |       Equalizer circuit        R
+L       2       |            breaker             R
++---------------+--------------------------------+
+L       2       |       Temperature contro       R
+L       3       |            l device            R
++---------------+--------------------------------+
+L       2       |       Volts per hertz re       R
+L       4       |              lay               R
++---------------+--------------------------------+
+L       2       |       Synchronizing or s       R
+L       5       |       ynchronism-check d       R
+L               |             evice              R
++---------------+--------------------------------+
+L       2       |       Apparatus thermal        R
+L       6       |             device             R
++---------------+--------------------------------+
+L       2       |       Undervoltage relay       R
+L       7       |                                R
++---------------+--------------------------------+
+L       2       |       Phase Undervoltage       R
+L       7       |                                R
+L       P       |                                R
++---------------+--------------------------------+
+L       2       |       DC undervoltage re       R
+L       7       |              lay               R
+L       S       |                                R
++---------------+--------------------------------+
+L       2       |       Third Harmonic Neu       R
+L       7       |       tral Undervoltage        R
+L       T       |                                R
+L       N       |                                R
++---------------+--------------------------------+
+L       2       |       100% Stator Earth        R
+L       7       |             Fault              R
+L       T       |                                R
+L       N       |                                R
+L       /       |                                R
+L       5       |                                R
+L       9       |                                R
+L       N       |                                R
++---------------+--------------------------------+
+L       2       |       Auxiliary Undervol       R
+L       7       |              tage              R
+L       X       |                                R
++---------------+--------------------------------+
+L       2       |       Undervoltage Auxil       R
+L       7       |           iary Input           R
+L               |                                R
+L       A       |                                R
+L       U       |                                R
+L       X       |                                R
++---------------+--------------------------------+
+L       2       |       Bus/Line Undervolt       R
+L       7       |              age               R
+L       /       |                                R
+L       2       |                                R
+L       7       |                                R
+L       X       |                                R
++---------------+--------------------------------+
+L       2       |       Accidental Generat       R
+L       7       |        or Energization         R
+L       /       |                                R
+L       5       |                                R
+L       0       |                                R
++---------------+--------------------------------+
+L       2       |         Flame Detector         R
+L       8       |                                R
++---------------+--------------------------------+
+L       2       |       Isolating Contacto       R
+L       9       |               r                R
++---------------+--------------------------------+
+L       3       |       Annunciator Relay        R
+L       0       |                                R
++---------------+--------------------------------+
+L       3       |       Separate Excitatio       R
+L       1       |            n Device            R
++---------------+--------------------------------+
+L       3       |       Directional Power        R
+L       2       |             Relay              R
++---------------+--------------------------------+
+L       3       |       Low Forward Power        R
+L       2       |                                R
+L       L       |                                R
++---------------+--------------------------------+
+L       3       |       Wattmetric Zero-Se       R
+L       2       |       quence Directional       R
+L       N       |                                R
++---------------+--------------------------------+
+L       3       |       Directional Power        R
+L       2       |                                R
+L       P       |                                R
++---------------+--------------------------------+
+L       3       |         Reverse Power          R
+L       2       |                                R
+L       R       |                                R
++---------------+--------------------------------+
+L       3       |        Position Switch         R
+L       3       |                                R
++---------------+--------------------------------+
+L       3       |       Master Sequence De       R
+L       4       |              vice              R
++---------------+--------------------------------+
+L       3       |       Brush-Operating or       R
+L       5       |        Slip-ring Short C       R
+L               |        ircuiting Device        R
++---------------+--------------------------------+
+L       3       |       Polarity or Polari       R
+L       6       |       zing Voltage Devic       R
+L               |               e                R
++---------------+--------------------------------+
+L       3       |       Undercurrent or Un       R
+L       7       |         derpower Relay         R
++---------------+--------------------------------+
+L       3       |           Underpower           R
+L       7       |                                R
+L       P       |                                R
++---------------+--------------------------------+
+L       3       |       Bearing Protective       R
+L       8       |        Device / Bearing        R
+L               |              Rtd               R
++---------------+--------------------------------+
+L       3       |       Mechanical Conditi       R
+L       9       |           on Monitor           R
++---------------+--------------------------------+
+L       4       |       Field Relay / Loss       R
+L       0       |          of Excitation         R
++---------------+--------------------------------+
+L       4       |       Field Circuit Brea       R
+L       1       |              ker               R
++---------------+--------------------------------+
+L       4       |       Running Circuit Br       R
+L       2       |             eaker              R
++---------------+--------------------------------+
+L       4       |       Manual Transfer or       R
+L       3       |         Selector Device        R
++---------------+--------------------------------+
+L       4       |       Unit Sequence Star       R
+L       4       |           ting Relay           R
++---------------+--------------------------------+
+L       4       |       Atmospheric Condit       R
+L       5       |          ion Monitor           R
++---------------+--------------------------------+
+L       4       |       Reverse-Phase or P       R
+L       6       |       hase Balance Curre       R
+L               |       nt Relay or Stator       R
+L               |        Current Unbalance       R
++---------------+--------------------------------+
+L       4       |       Phase-Sequence or        R
+L       7       |       Phase Balance Volt       R
+L               |           age Relay            R
++---------------+--------------------------------+
+L       4       |       Incomplete Sequenc       R
+L       8       |       e Relay / Blocked        R
+L               |             Rotor              R
++---------------+--------------------------------+
+L       4       |       Machine or Transfo       R
+L       9       |       rmer Thermal Relay       R
+L               |        / Thermal Overloa       R
+L               |               d                R
++---------------+--------------------------------+
+L       4       |       RTD Biased Thermal       R
+L       9       |            Overload            R
+L       R       |                                R
+L       T       |                                R
+L       D       |                                R
++---------------+--------------------------------+
+L       5       |       Instantaneous Over       R
+L       0       |         current Relay          R
++---------------+--------------------------------+
+L       5       |        Breaker Failure         R
+L       0       |                                R
+L       B       |                                R
+L       F       |                                R
++---------------+--------------------------------+
+L       5       |       Current Disturbanc       R
+L       0       |           e Detector           R
+L       D       |                                R
+L       D       |                                R
++---------------+--------------------------------+
+L       5       |       End Fault Protecti       R
+L       0       |               on               R
+L       E       |                                R
+L       F       |                                R
++---------------+--------------------------------+
+L       5       |       Ground Instantaneo       R
+L       0       |         us Overcurrent         R
+L       G       |                                R
++---------------+--------------------------------+
+L       5       |       Isolated Ground In       R
+L       0       |       stantaneous Overcu       R
+L       I       |             rrent              R
+L       G       |                                R
++---------------+--------------------------------+
+L       5       |       Acceleration Time        R
+L       0       |                                R
+L       L       |                                R
+L       R       |                                R
++---------------+--------------------------------+
+L       5       |       Neutral Instantane       R
+L       0       |        ous Overcurrent         R
+L       N       |                                R
++---------------+--------------------------------+
+L       5       |       Neutral Instantane       R
+L       0       |       ous Breaker Failur       R
+L       N       |               e                R
+L       B       |                                R
+L       F       |                                R
++---------------+--------------------------------+
+L       5       |       Phase Instantaneou       R
+L       0       |         s Overcurrent          R
+L       P       |                                R
++---------------+--------------------------------+
+L       5       |       Sensitive Ground I       R
+L       0       |       nstantaneous Overc       R
+L       S       |             urrent             R
+L       G       |                                R
++---------------+--------------------------------+
+L       5       |       Split Phase Instan       R
+L       0       |        taneous Current         R
+L       S       |                                R
+L       P       |                                R
++---------------+--------------------------------+
+L       5       |       Negative Sequence        R
+L       0       |       Instantaneous Over       R
+L       Q       |            current             R
++---------------+--------------------------------+
+L       5       |       Accidental Energiz       R
+L       0       |             ation              R
+L       /       |                                R
+L       2       |                                R
+L       7       |                                R
++---------------+--------------------------------+
+L       5       |       Instantaneous / Ti       R
+L       0       |       me-delay Overcurre       R
+L       /       |            nt relay            R
+L       5       |                                R
+L       1       |                                R
++---------------+--------------------------------+
+L       5       |       Sensitive earth-fa       R
+L       0       |         ult protection         R
+L       N       |                                R
+L       s       |                                R
+L       /       |                                R
+L       5       |                                R
+L       1       |                                R
+L       N       |                                R
+L       s       |                                R
++---------------+--------------------------------+
+L       5       |           Ct Trouble           R
+L       0       |                                R
+L       /       |                                R
+L       7       |                                R
+L       4       |                                R
++---------------+--------------------------------+
+L       5       |       Instantaneous Diff       R
+L       0       |            erential            R
+L       /       |                                R
+L       8       |                                R
+L       7       |                                R
++---------------+--------------------------------+
+L       5       |       AC Time Overcurren       R
+L       1       |            t Relay             R
++---------------+--------------------------------+
+L       5       |            Overload            R
+L       1       |                                R
++---------------+--------------------------------+
+L       5       |       Ground Time Overcu       R
+L       1       |             rrent              R
+L       G       |                                R
++---------------+--------------------------------+
+L       5       |       AC inverse time ov       R
+L       1       |       ercurrent (locked        R
+L       L       |       rotor) protection        R
+L       R       |             relay              R
++---------------+--------------------------------+
+L       5       |       Neutral Time Overc       R
+L       1       |             urrent             R
+L       N       |                                R
++---------------+--------------------------------+
+L       5       |       Phase Time Overcur       R
+L       1       |              rent              R
+L       P       |                                R
++---------------+--------------------------------+
+L       5       |       Locked / Stalled R       R
+L       1       |              otor              R
+L       R       |                                R
++---------------+--------------------------------+
+L       5       |       Voltage Restrained       R
+L       1       |        Time Overcurrent        R
+L       V       |                                R
++---------------+--------------------------------+
+L       5       |       Negative Sequence        R
+L       1       |        Time Overcurrent        R
+L       Q       |                                R
++---------------+--------------------------------+
+L       5       |       AC circuit breaker       R
+L       2       |                                R
++---------------+--------------------------------+
+L       5       |       AC circuit breaker       R
+L       2       |        position (contact       R
+L       a       |        open when circuit       R
+L               |          breaker open)         R
++---------------+--------------------------------+
+L       5       |       AC circuit breaker       R
+L       2       |        position (contact       R
+L       b       |        closed when circu       R
+L               |        it breaker open)        R
++---------------+--------------------------------+
+L       5       |       Exciter or Dc Gene       R
+L       3       |          rator Relay           R
++---------------+--------------------------------+
+L       5       |       Turning Gear Engag       R
+L       4       |           ing Device           R
++---------------+--------------------------------+
+L       5       |       Power Factor Relay       R
+L       5       |                                R
++---------------+--------------------------------+
+L       5       |       Field Application        R
+L       6       |             Relay              R
++---------------+--------------------------------+
+L       5       |       Short-Circuiting o       R
+L       7       |       r Grounding Device       R
++---------------+--------------------------------+
+L       5       |       Rectification Fail       R
+L       8       |           ure Relay            R
++---------------+--------------------------------+
+L       5       |       Overvoltage Relay        R
+L       9       |                                R
++---------------+--------------------------------+
+L       5       |       Bank Phase Overvol       R
+L       9       |              tage              R
+L       B       |                                R
++---------------+--------------------------------+
+L       5       |       Phase Overvoltage        R
+L       9       |                                R
+L       P       |                                R
++---------------+--------------------------------+
+L       5       |       Neutral Overvoltag       R
+L       9       |               e                R
+L       N       |                                R
++---------------+--------------------------------+
+L       5       |       Neutral Voltage Un       R
+L       9       |            balance             R
+L       N       |                                R
+L       U       |                                R
++---------------+--------------------------------+
+L       5       |       Phase Overvoltage        R
+L       9       |                                R
+L       P       |                                R
++---------------+--------------------------------+
+L       5       |       Auxiliary Overvolt       R
+L       9       |              age               R
+L       X       |                                R
++---------------+--------------------------------+
+L       5       |       Negative Sequence        R
+L       9       |          Overvoltage           R
+L       Q       |                                R
++---------------+--------------------------------+
+L       6       |       Voltage or current       R
+L       0       |          balance relay         R
++---------------+--------------------------------+
+L       6       |       Voltage or Current       R
+L       0       |          Balance Relay         R
++---------------+--------------------------------+
+L       6       |       Neutral Current Un       R
+L       0       |            balance             R
+L       N       |                                R
++---------------+--------------------------------+
+L       6       |       Phase Current Unba       R
+L       0       |             lance              R
+L       P       |                                R
++---------------+--------------------------------+
+L       6       |       Density Switch or        R
+L       1       |             Sensor             R
++---------------+--------------------------------+
+L       6       |       Time-Delay Stoppin       R
+L       2       |       g or Opening Relay       R
++---------------+--------------------------------+
+L       6       |       Pressure Switch De       R
+L       3       |             tector             R
++---------------+--------------------------------+
+L       6       |       Ground Protective        R
+L       4       |             Relay              R
++---------------+--------------------------------+
+L       6       |       Field Ground Prote       R
+L       4       |             ction              R
+L       F       |                                R
++---------------+--------------------------------+
+L       6       |       Rotor earth fault        R
+L       4       |                                R
+L       R       |                                R
++---------------+--------------------------------+
+L       6       |       Restricted earth f       R
+L       4       |       ault differential        R
+L       R       |                                R
+L       E       |                                R
+L       F       |                                R
++---------------+--------------------------------+
+L       6       |       Stator earth fault       R
+L       4       |                                R
+L       S       |                                R
++---------------+--------------------------------+
+L       6       |       Sub-harmonic Stato       R
+L       4       |       r Ground Protectio       R
+L       S       |               n                R
++---------------+--------------------------------+
+L       6       |       100% Stator Ground       R
+L       4       |                                R
+L       T       |                                R
+L       N       |                                R
++---------------+--------------------------------+
+L       6       |            Governor            R
+L       5       |                                R
++---------------+--------------------------------+
+L       6       |       Notching or Joggin       R
+L       6       |       g Device/Maximum S       R
+L               |       tarting Rate/Start       R
+L               |       s Per Hour/Time Be       R
+L               |          tween Starts          R
++---------------+--------------------------------+
+L       6       |       AC Directional Ove       R
+L       7       |         rcurrent Relay         R
++---------------+--------------------------------+
+L       6       |       Ground Directional       R
+L       7       |           Overcurrent          R
+L       G       |                                R
++---------------+--------------------------------+
+L       6       |       Neutral Directiona       R
+L       7       |         l Overcurrent          R
+L       N       |                                R
++---------------+--------------------------------+
+L       6       |       Earth fault direct       R
+L       7       |             ional              R
+L       N       |                                R
+L       s       |                                R
++---------------+--------------------------------+
+L       6       |       Phase Directional        R
+L       7       |          Overcurrent           R
+L       P       |                                R
++---------------+--------------------------------+
+L       6       |       Sensitive Ground D       R
+L       7       |       irectional Overcur       R
+L       S       |              rent              R
+L       G       |                                R
++---------------+--------------------------------+
+L       6       |       Negative Sequence        R
+L       7       |       Directional Overcu       R
+L       Q       |             rrent              R
++---------------+--------------------------------+
+L       6       |       Blocking Relay / P       R
+L       8       |       ower Swing Blockin       R
+L               |               g                R
++---------------+--------------------------------+
+L       6       |       Permissive Control       R
+L       9       |             Device             R
++---------------+--------------------------------+
+L       7       |            Rheostat            R
+L       0       |                                R
++---------------+--------------------------------+
+L       7       |         Liquid Switch          R
+L       1       |                                R
++---------------+--------------------------------+
+L       7       |       DC Circuit Breaker       R
+L       2       |                                R
++---------------+--------------------------------+
+L       7       |       Load-Resistor Cont       R
+L       3       |             actor              R
++---------------+--------------------------------+
+L       7       |          Alarm Relay           R
+L       4       |                                R
++---------------+--------------------------------+
+L       7       |       Position Changing        R
+L       5       |           Mechanism            R
++---------------+--------------------------------+
+L       7       |       DC Overcurrent Rel       R
+L       6       |               ay               R
++---------------+--------------------------------+
+L       7       |       Telemetering Devic       R
+L       7       |               e                R
++---------------+--------------------------------+
+L       7       |       Phase Angle Measur       R
+L       8       |       ing or Out-of-Step       R
+L               |        Protective Relay        R
++---------------+--------------------------------+
+L       7       |         Loss of Mains          R
+L       8       |                                R
+L       V       |                                R
++---------------+--------------------------------+
+L       7       |       AC Reclosing Relay       R
+L       9       |         / Auto Reclose         R
++---------------+--------------------------------+
+L       8       |       Liquid or Gas Flow       R
+L       0       |              Relay             R
++---------------+--------------------------------+
+L       8       |        Frequency Relay         R
+L       1       |                                R
++---------------+--------------------------------+
+L       8       |         Over Frequency         R
+L       1       |                                R
+L       O       |                                R
++---------------+--------------------------------+
+L       8       |       Rate-of-Change Fre       R
+L       1       |             quency             R
+L       R       |                                R
++---------------+--------------------------------+
+L       8       |        Under Frequency         R
+L       1       |                                R
+L       U       |                                R
++---------------+--------------------------------+
+L       8       |       DC Reclosing Relay       R
+L       2       |                                R
++---------------+--------------------------------+
+L       8       |       Automatic Selectiv       R
+L       3       |       e Control or Trans       R
+L               |           fer Relay            R
++---------------+--------------------------------+
+L       8       |       Operating Mechanis       R
+L       4       |               m                R
++---------------+--------------------------------+
+L       8       |       Pilot Communicatio       R
+L       5       |       ns, Carrier or Pil       R
+L               |         ot-Wire Relay          R
++---------------+--------------------------------+
+L       8       |       Lock-Out Relay, Ma       R
+L       6       |        ster Trip Relay         R
++---------------+--------------------------------+
+L       8       |       Differential Prote       R
+L       7       |          ctive Relay           R
++---------------+--------------------------------+
+L       8       |        Bus Differential        R
+L       7       |                                R
+L       B       |                                R
++---------------+--------------------------------+
+L       8       |       Generator Differen       R
+L       7       |              tial              R
+L       G       |                                R
++---------------+--------------------------------+
+L       8       |       Generator/Transfor       R
+L       7       |        mer Differential        R
+L       G       |                                R
+L       T       |                                R
++---------------+--------------------------------+
+L       8       |       Segregated Line Cu       R
+L       7       |       rrent Differential       R
+L       L       |                                R
++---------------+--------------------------------+
+L       8       |       Ground Line Curren       R
+L       7       |         t Differential         R
+L       L       |                                R
+L       G       |                                R
++---------------+--------------------------------+
+L       8       |       Motor Differential       R
+L       7       |                                R
+L       M       |                                R
++---------------+--------------------------------+
+L       8       |       Overall Differenti       R
+L       7       |               al               R
+L       O       |                                R
++---------------+--------------------------------+
+L       8       |        Phase Comparison        R
+L       7       |                                R
+L       P       |                                R
+L       C       |                                R
++---------------+--------------------------------+
+L       8       |       Restricted Ground        R
+L       7       |             Fault              R
+L       R       |                                R
+L       G       |                                R
+L       F       |                                R
++---------------+--------------------------------+
+L       8       |       Stator Differentia       R
+L       7       |               l                R
+L       S       |                                R
++---------------+--------------------------------+
+L       8       |       Percent Differenti       R
+L       7       |               al               R
+L       S       |                                R
++---------------+--------------------------------+
+L       8       |       Transformer Differ       R
+L       7       |             ential             R
+L       T       |                                R
++---------------+--------------------------------+
+L       8       |       Voltage Differenti       R
+L       7       |               al               R
+L       V       |                                R
++---------------+--------------------------------+
+L       8       |       Auxiliary Motor or       R
+L       8       |         Motor Generator        R
++---------------+--------------------------------+
+L       8       |          Line Switch           R
+L       9       |                                R
++---------------+--------------------------------+
+L       9       |       Regulating Device        R
+L       0       |                                R
++---------------+--------------------------------+
+L       9       |       Voltage Directiona       R
+L       1       |            l Relay             R
++---------------+--------------------------------+
+L       9       |       Voltage And Power        R
+L       2       |       Directional Relay        R
++---------------+--------------------------------+
+L       9       |       Field-Changing Con       R
+L       3       |             tactor             R
++---------------+--------------------------------+
+L       9       |       Tripping or Trip-F       R
+L       4       |           ree Relay            R
++---------------+--------------------------------+
+L       9       |       For specific appli       R
+L       5       |       cations where othe       R
+L               |       r numbers are not        R
+L               |            suitable            R
++---------------+--------------------------------+
+L       9       |       For specific appli       R
+L       6       |       cations where othe       R
+L               |       r numbers are not        R
+L               |            suitable            R
++---------------+--------------------------------+
+L       9       |       For specific appli       R
+L       7       |       cations where othe       R
+L               |       r numbers are not        R
+L               |            suitable            R
++---------------+--------------------------------+
+L       9       |       For specific appli       R
+L       8       |       cations where othe       R
+L               |       r numbers are not        R
+L               |            suitable            R
++---------------+--------------------------------+
+L       9       |       For specific appli       R
+L       9       |       cations where othe       R
+L               |       r numbers are not        R
+L               |            suitable            R
++---------------+--------------------------------+
+L       n       |       Acronyms Descripti       R
+L       a       |               on               R
+L       n       |                                R
++---------------+--------------------------------+
+L       A       |       Arc Flash Detector       R
+L       F       |                                R
+L       D       |                                R
++---------------+--------------------------------+
+L       C       |       Clock or Timing So       R
+L       L       |              urce              R
+L       K       |                                R
++---------------+--------------------------------+
+L       C       |        Cold Load Pickup        R
+L       L       |                                R
+L       P       |                                R
++---------------+--------------------------------+
+L       D       |       Dynamic Disturbanc       R
+L       D       |           e Recorder           R
+L       R       |                                R
++---------------+--------------------------------+
+L       D       |       Digital Fault Reco       R
+L       F       |              rder              R
+L       R       |                                R
++---------------+--------------------------------+
+L       D       |       Disturbance Monito       R
+L       M       |          r Equipment           R
+L       E       |                                R
++---------------+--------------------------------+
+L       E       |       Environmental data       R
+L       N       |                                R
+L       V       |                                R
++---------------+--------------------------------+
+L       H       |       High Impedance Fau       R
+L       I       |          lt Detector           R
+L       Z       |                                R
++---------------+--------------------------------+
+L       H       |       Human Machine Inte       R
+L       M       |             rface              R
+L       I       |                                R
++---------------+--------------------------------+
+L       H       |           Historian            R
+L       S       |                                R
+L       T       |                                R
++---------------+--------------------------------+
+L       L       |          Scheme Logic          R
+L       G       |                                R
+L       C       |                                R
++---------------+--------------------------------+
+L       M       |       Substation Meterin       R
+L       E       |               g                R
+L       T       |                                R
++---------------+--------------------------------+
+L       P       |       Phasor Data Concen       R
+L       D       |             trator             R
+L       C       |                                R
++---------------+--------------------------------+
+L       P       |       Phasor Measurement       R
+L       M       |              Unit              R
+L       U       |                                R
++---------------+--------------------------------+
+L       P       |       Power Quality Moni       R
+L       Q       |              tor               R
+L       M       |                                R
++---------------+--------------------------------+
+L       R       |       Remote Input/Outpu       R
+L       I       |            t Device            R
+L       O       |                                R
++---------------+--------------------------------+
+L       R       |       Resistance Tempera       R
+L       T       |         ture Detector          R
+L       D       |                                R
++---------------+--------------------------------+
+L       R       |       Remote Terminal Un       R
+L       T       |       it/Data Concentrat       R
+L       U       |               or               R
++---------------+--------------------------------+
+L       S       |       Sequence of Events       R
+L       E       |            Recorder            R
+L       R       |                                R
++---------------+--------------------------------+
+L       T       |       Trip Circuit Monit       R
+L       C       |               or               R
+L       M       |                                R
++---------------+--------------------------------+
+L       L       |       Local/Remote selec       R
+L       R       |           tor switch           R
+L       S       |                                R
+L       S       |                                R
++---------------+--------------------------------+
+L       V       |          Vt Fuse Fail          R
+L       T       |                                R
+L       F       |                                R
+L       F       |                                R
++---------------+--------------------------------+
+L       n       |       Suffixes Descripti       R
+L       a       |               on               R
+L       n       |                                R
++---------------+--------------------------------+
+L       _       |       Positive-Sequence        R
+L       1       |                                R
++---------------+--------------------------------+
+L       _       |       Negative-Sequence        R
+L       2       |                                R
++---------------+--------------------------------+
+L       A       |       Alarm, Auxiliary P       R
+L               |              ower              R
++---------------+--------------------------------+
+L       A       |       Alternating Curren       R
+L       C       |               t                R
++---------------+--------------------------------+
+L       A       |             Anode              R
+L       N       |                                R
++---------------+--------------------------------+
+L       B       |       Bus, Battery, or B       R
+L               |             lower              R
++---------------+--------------------------------+
+L       B       |        Breaker Failure         R
+L       F       |                                R
++---------------+--------------------------------+
+L       B       |             Brake              R
+L       K       |                                R
++---------------+--------------------------------+
+L       B       |         Block (Valve)          R
+L       L       |                                R
++---------------+--------------------------------+
+L       B       |             Bypass             R
+L       P       |                                R
++---------------+--------------------------------+
+L       B       |            Bus Tie             R
+L       T       |                                R
++---------------+--------------------------------+
+L       B       |             Backup             R
+L       U       |                                R
++---------------+--------------------------------+
+L       C       |       Capacitor, Condens       R
+L               |       er, Compensator, C       R
+L               |       arrier Current, Ca       R
+L               |        se or Compressor        R
++---------------+--------------------------------+
+L       C       |            Cathode             R
+L       A       |                                R
++---------------+--------------------------------+
+L       C       |         Check (Valve)          R
+L       H       |                                R
++---------------+--------------------------------+
+L       D       |       Discharge (Valve)        R
++---------------+--------------------------------+
+L       D       |         Direct Current         R
+L       C       |                                R
++---------------+--------------------------------+
+L       D       |       Directional Compar       R
+L       C       |         ison Blocking          R
+L       B       |                                R
++---------------+--------------------------------+
+L       D       |       Directional Compar       R
+L       C       |        ison Unblocking         R
+L       U       |                                R
+L       B       |                                R
++---------------+--------------------------------+
+L       D       |       Disturbance Detect       R
+L       D       |               or               R
++---------------+--------------------------------+
+L       D       |       Direct Underreachi       R
+L       U       |        ng Transfer Trip        R
+L       T       |                                R
+L       T       |                                R
++---------------+--------------------------------+
+L       E       |            Exciter             R
++---------------+--------------------------------+
+L       F       |       Feeder, Field, Fil       R
+L               |       ament, Filter, or        R
+L               |              Fan               R
++---------------+--------------------------------+
+L       G       |       Ground or Generato       R
+L               |               r                R
++---------------+--------------------------------+
+L       G       |          Ground Check          R
+L       C       |                                R
++---------------+--------------------------------+
+L       H       |       Heater or Housing        R
++---------------+--------------------------------+
+L       L       |         Line or Logic          R
++---------------+--------------------------------+
+L       M       |       Motor or Metering        R
++---------------+--------------------------------+
+L       M       |       Mechanism Operated       R
+L       O       |             Contact            R
+L       C       |                                R
++---------------+--------------------------------+
+L       N       |       Neutral or Network       R
++---------------+--------------------------------+
+L       O       |              Over              R
++---------------+--------------------------------+
+L       P       |         Phase or Pump          R
++---------------+--------------------------------+
+L       P       |        Phase Comparison        R
+L       C       |                                R
++---------------+--------------------------------+
+L       P       |       Pott: Permissive O       R
+L       O       |       verreaching Transf       R
+L       T       |            er Trip             R
+L       T       |                                R
++---------------+--------------------------------+
+L       P       |       Putt: Permissive U       R
+L       U       |       nderreaching Trans       R
+L       T       |            fer Trip            R
+L       T       |                                R
++---------------+--------------------------------+
+L       R       |       Reactor, Rectifier       R
+L               |           , or Room            R
++---------------+--------------------------------+
+L       S       |       Synchronizing, Sec       R
+L               |       ondary, Strainer,        R
+L               |       Sump, or Suction (       R
+L               |             Valve)             R
++---------------+--------------------------------+
+L       S       |       Switch On To Fault       R
+L       O       |                                R
+L       T       |                                R
+L       F       |                                R
++---------------+--------------------------------+
+L       T       |       Transformer or Thy       R
+L               |             ratron             R
++---------------+--------------------------------+
+L       T       |           Time Delay           R
+L       D       |                                R
++---------------+--------------------------------+
+L       T       |       Time-Delay Closing       R
+L       D       |             Contact            R
+L       C       |                                R
++---------------+--------------------------------+
+L       T       |       Time Delayed Relay       R
+L       D       |          Coil Drop-Out         R
+L       D       |                                R
+L       O       |                                R
++---------------+--------------------------------+
+L       T       |       Time-Delay Opening       R
+L       D       |             Contact            R
+L       O       |                                R
++---------------+--------------------------------+
+L       T       |       Time Delayed Relay       R
+L       D       |           Coil Pickup          R
+L       P       |                                R
+L       U       |                                R
++---------------+--------------------------------+
+L       T       |       Total Harmonic Dis       R
+L       H       |            tortion             R
+L       D       |                                R
++---------------+--------------------------------+
+L       T       |       Transformer (High-       R
+L       H       |         Voltage Side)          R
++---------------+--------------------------------+
+L       T       |       Transformer (Low-V       R
+L       L       |          oltage Side)          R
++---------------+--------------------------------+
+L       T       |           Telemeter            R
+L       M       |                                R
++---------------+--------------------------------+
+L       T       |       Transformer (Terti       R
+L       T       |       ary-Voltage Side)        R
++---------------+--------------------------------+
+L       U       |         Under or Unit          R
++---------------+--------------------------------+
+L       X       |           Auxiliary            R
++---------------+--------------------------------+
+L       Z       |           Impedance            R
++BBBBBBBBBBBBBBB+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB+
