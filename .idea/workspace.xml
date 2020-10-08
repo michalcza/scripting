@@ -22,7 +22,31 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dac1c7d-906b-48b5-b6f2-e99be7ffa80a" name="Default Changelist" comment="Adding GUI and PyCharm config files." />
+    <list default="true" id="2dac1c7d-906b-48b5-b6f2-e99be7ffa80a" name="Default Changelist" comment="Adding GUI and PyCharm config files.">
+      <change afterPath="$PROJECT_DIR$/ImageCollector/WebImageCollector_Py/WIC.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageCollector/WebImageCollector_Py/estore.honda.com/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageCollector/WebImageCollector_Py/estore.honda.com/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageCollector/WebImageCollector_Py/estore.honda.com/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageCollector/WebImageCollector_Py/estore.honda.com/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageCollector/WebImageCollector_Py/estore.honda.com/6pt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageCollector/WebImageCollector_Py/estore.honda.com/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageCollector/WebImageCollector_Py/estore.honda.com/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageCollector/WebImageCollector_Py/estore.honda.com/logo_estore_avatar1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TableGenerator/input/IntelliRupter - Copy.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TableGenerator/input/IntelliRupter-UTF8.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TableGenerator/input/IntelliRupter-UTF8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scripting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scripting.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageCollector/ImageCollector.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ImageCollector/ImageCollector_KSH/ImageCollector.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageCollector/WebImageCollector.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ImageCollector/WebImageCollector_KSH/WebImageCollector.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TableGenerator/ASCIITable.py" beforeDir="false" afterPath="$PROJECT_DIR$/TableGenerator/ASCIITable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TableGenerator/input/ANSI.csv.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TableGenerator/input/ANSI.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TableGenerator/input/ANSI.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TableGenerator/input/IntelliRupter.csv" beforeDir="false" afterPath="$PROJECT_DIR$/TableGenerator/input/IntelliRupter.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TableGenerator/input/IntelliRupter.csv.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,8 +67,15 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/michalcza/scripting" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1iHlgjq3JUDvlW21LpFFViqbBCP" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -55,21 +86,27 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mczarnecki\PycharmProjects\scripting\ImageCollector\WebImageCollector_KSH" />
+      <recent name="C:\Users\mczarnecki\PycharmProjects\scripting\ImageCollector\ImageCollector_KSH" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.ASCIITable">
     <configuration name="ASCIITable" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="scripting" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\mczarnecki\PycharmProjects\ASCII_Table\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TableGenerator" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TableGenerator/ASCIITable.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -100,9 +137,43 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="WIC" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="scripting" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ImageCollector/WebImageCollector_Py" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ImageCollector/WebImageCollector_Py/WIC.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WebImageCollector.sh" type="ShConfigurationType" temporary="true">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/ImageCollector/WebImageCollector_KSH/WebImageCollector.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/ImageCollector" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.ASCIITable" />
+        <item itemvalue="Python.WIC" />
+        <item itemvalue="Shell Script.WebImageCollector.sh" />
         <item itemvalue="Python.GUITest" />
       </list>
     </recent_temporary>
@@ -130,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602023635052</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Adding configuration files from PyCharm">
+      <created>1602024327507</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602024327507</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,10 +223,14 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myShow1" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Adding GUI and PyCharm config files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding GUI and PyCharm config files." />
+    <MESSAGE value="Adding configuration files from PyCharm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding configuration files from PyCharm" />
   </component>
   <component name="WindowStateProjectService">
     <state x="343" y="178" key="#Inspections" timestamp="1601580082636">
@@ -163,38 +245,46 @@
       <screen x="0" y="0" width="1431" height="1000" />
     </state>
     <state x="172" y="155" width="1086" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1431.1000@0.0.1431.1000" timestamp="1602023972862" />
+    <state x="436" y="302" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602099998166">
+      <screen x="0" y="0" width="1431" height="1000" />
+    </state>
+    <state x="436" y="302" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1431.1000@0.0.1431.1000" timestamp="1602099998166" />
     <state x="463" y="355" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1601590189032">
       <screen x="0" y="0" width="1431" height="1000" />
     </state>
     <state x="463" y="355" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1431.1000@0.0.1431.1000" timestamp="1601590189032" />
-    <state width="1411" height="191" key="GridCell.Tab.0.bottom" timestamp="1602023981941">
+    <state x="497" y="241" key="FileChooserDialogImpl" timestamp="1602024723378">
       <screen x="0" y="0" width="1431" height="1000" />
     </state>
-    <state width="1411" height="191" key="GridCell.Tab.0.bottom/0.0.1431.1000@0.0.1431.1000" timestamp="1602023981941" />
-    <state width="1411" height="191" key="GridCell.Tab.0.center" timestamp="1602023981941">
+    <state x="497" y="241" key="FileChooserDialogImpl/0.0.1431.1000@0.0.1431.1000" timestamp="1602024723378" />
+    <state width="1411" height="329" key="GridCell.Tab.0.bottom" timestamp="1602196942205">
       <screen x="0" y="0" width="1431" height="1000" />
     </state>
-    <state width="1411" height="191" key="GridCell.Tab.0.center/0.0.1431.1000@0.0.1431.1000" timestamp="1602023981941" />
-    <state width="1411" height="191" key="GridCell.Tab.0.left" timestamp="1602023981941">
+    <state width="1411" height="329" key="GridCell.Tab.0.bottom/0.0.1431.1000@0.0.1431.1000" timestamp="1602196942205" />
+    <state width="1411" height="329" key="GridCell.Tab.0.center" timestamp="1602196942205">
       <screen x="0" y="0" width="1431" height="1000" />
     </state>
-    <state width="1411" height="191" key="GridCell.Tab.0.left/0.0.1431.1000@0.0.1431.1000" timestamp="1602023981941" />
-    <state width="1411" height="191" key="GridCell.Tab.0.right" timestamp="1602023981941">
+    <state width="1411" height="329" key="GridCell.Tab.0.center/0.0.1431.1000@0.0.1431.1000" timestamp="1602196942205" />
+    <state width="1411" height="329" key="GridCell.Tab.0.left" timestamp="1602196942205">
       <screen x="0" y="0" width="1431" height="1000" />
     </state>
-    <state width="1411" height="191" key="GridCell.Tab.0.right/0.0.1431.1000@0.0.1431.1000" timestamp="1602023981941" />
-    <state x="188" y="116" key="SettingsEditor" timestamp="1602017169996">
+    <state width="1411" height="329" key="GridCell.Tab.0.left/0.0.1431.1000@0.0.1431.1000" timestamp="1602196942205" />
+    <state width="1411" height="329" key="GridCell.Tab.0.right" timestamp="1602196942205">
       <screen x="0" y="0" width="1431" height="1000" />
     </state>
-    <state x="188" y="116" key="SettingsEditor/0.0.1431.1000@0.0.1431.1000" timestamp="1602017169996" />
+    <state width="1411" height="329" key="GridCell.Tab.0.right/0.0.1431.1000@0.0.1431.1000" timestamp="1602196942205" />
+    <state x="176" y="261" key="SettingsEditor" timestamp="1602100708544">
+      <screen x="0" y="0" width="1431" height="1000" />
+    </state>
+    <state x="176" y="261" key="SettingsEditor/0.0.1431.1000@0.0.1431.1000" timestamp="1602100708544" />
     <state x="309" y="220" key="Vcs.Push.Dialog.v2" timestamp="1602023643682">
       <screen x="0" y="0" width="1431" height="1000" />
     </state>
     <state x="309" y="220" key="Vcs.Push.Dialog.v2/0.0.1431.1000@0.0.1431.1000" timestamp="1602023643682" />
-    <state x="534" y="414" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602016159734">
+    <state x="534" y="414" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602024353539">
       <screen x="0" y="0" width="1431" height="1000" />
     </state>
-    <state x="534" y="414" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1431.1000@0.0.1431.1000" timestamp="1602016159734" />
+    <state x="534" y="414" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1431.1000@0.0.1431.1000" timestamp="1602024353539" />
     <state x="850" y="112" width="581" height="888" key="find.popup" timestamp="1601590550677">
       <screen x="0" y="0" width="1431" height="1000" />
     </state>

@@ -10,63 +10,78 @@
 # https://www.geeksforgeeks.org/user-input-in-pysimplegui/
 #
 import os.path
-import sys
 
 import PySimpleGUI as sg
 import beautifultable
 import pandas
 
-# if len(sys.argv) == 0:
-
-    # if len(sys.argv) == 1:
 WINDOW = sg.Window('CSV to ASCII',
-                   [[sg.Text('This will convert CSV to fixed width ASCII text file')],
-                   [sg.Text('_' * 80)],
-                   [sg.Text('Left border character', size=(30, 1)), sg.InputText('|', size=(1, 1), key='left_border')],
-                   [sg.Text('Right border character', size=(30, 1)), sg.InputText('|', size=(1, 1), key='right_border')],
-                   [sg.Text('Top border character', size=(30, 1)), sg.InputText('#', size=(1, 1), key ='top_border')],
-                   [sg.Text('Bottom border character', size=(30, 1)), sg.InputText('=', size=(1, 1), key='bottom_border')],
-                   [sg.Text('Header separator character', size=(30, 1)), sg.InputText('#', size=(1, 1), key='header')],
-                   [sg.Text('Row separator character', size=(30, 1)), sg.InputText('-', size=(1, 1), key='row')],
-                   [sg.Text('Intersection character', size=(30, 1)), sg.InputText('+', size=(1, 1), key='intersection')],
-                   [sg.Text('Column separator character', size=(30, 1)), sg.InputText(':', size=(1, 1), key='column')],
-                   [sg.Text('Table Width', size=(15, 1), ),
-                    sg.Spin(values=[i for i in range(1, 500)], initial_value=100, size=(3, 1), key='width'),
-                    sg.Text('Cell Padding', size=(18, 1)),
-                    sg.Spin(values=[i for i in range(1, 10)], initial_value=2, size=(2, 1), key='padding')],
-                   [sg.Text('_' * 80)],
-                   [sg.Text('CSV to open')],
-                   [sg.In(key='source'), sg.FileBrowse()],
-                   [sg.Open(), sg.Cancel()]])
+                   [[sg.Text('This will convert CSV to fixed width ASCII text file. UTF-8 encoded CSV file works best.')],
+                    [sg.Text('_' * 80)],
+                    [sg.Text('Left border character', size=(30, 1)), sg.InputText('|', size=(1, 1), key='left_border')],
+                    [sg.Text('Right border character', size=(30, 1)),
+                     sg.InputText('|', size=(1, 1), key='right_border')],
+                    [sg.Text('Top border character(s)', size=(30, 1)), sg.InputText('#', size=(3, 1), key='top_border')],
+                    [sg.Text('Bottom border character(s)', size=(30, 1)),
+                     sg.InputText('=', size=(3, 1), key='bottom_border')],
+                    [sg.Text('Bottom intersection character', size=(30, 1)),
+                     sg.InputText('=', size=(1, 1), key='bottom_x')],
+                    [sg.Text('Bottom left character', size=(30, 1)), sg.InputText('=', size=(1, 1), key='bottom_l')],
+                    [sg.Text('Bottom right character', size=(30, 1)), sg.InputText('=', size=(1, 1), key='bottom_r')],
+                    [sg.Text('Top intersection character', size=(30, 1)), sg.InputText('=', size=(1, 1), key='top_x')],
+                    [sg.Text('Top left character', size=(30, 1)), sg.InputText('=', size=(1, 1), key='top_l')],
+                    [sg.Text('Top right character', size=(30, 1)), sg.InputText('=', size=(1, 1), key='top_r')],
+                    [sg.Text('Header separator character(s)', size=(30, 1)), sg.InputText('#', size=(3, 1), key='header')],
+                    [sg.Text('Row separator character(s)', size=(30, 1)), sg.InputText('-', size=(3, 1), key='row')],
+                    [sg.Text('Intersection character', size=(30, 1)),
+                     sg.InputText('+', size=(1, 1), key='intersection')],
+                    [sg.Text('Left header character', size=(30, 1)), sg.InputText('+', size=(1, 1), key='header_l')],
+                    [sg.Text('Right header character', size=(30, 1)), sg.InputText('+', size=(1, 1), key='header_r')],
+                    [sg.Text('Left intersection character', size=(30, 1)),
+                     sg.InputText('+', size=(1, 1), key='left_x')],
+                    [sg.Text('Right intersection character', size=(30, 1)),
+                     sg.InputText('+', size=(1, 1), key='right_x')],
+                    [sg.Text('Column separator character', size=(30, 1)), sg.InputText(':', size=(1, 1), key='column')],
+                    [sg.Text('Table Width', size=(15, 1), ),
+                     sg.Spin(values=[i for i in range(1, 500)], initial_value=100, size=(3, 1), key='width'),
+                     sg.Text('Cell Padding', size=(18, 1)),
+                     sg.Spin(values=[i for i in range(1, 10)], initial_value=2, size=(2, 1), key='padding')],
+                    [sg.Text('_' * 80)],
+                    [sg.Text('CSV to convert. OUTPUT file will be placed in the same folder as INPUT file and renamed as TXT file.')],
+                    [sg.In(key='source'), sg.FileBrowse()],
+                    [sg.Open(), sg.Cancel()]])
 
 EVENT, VALUES = WINDOW.read()
 print(VALUES)
+# DECLARE VARIABLES
 FNAME = VALUES['source']
 LEFT_BORDER = VALUES['left_border']
 RIGHT_BORDER = VALUES['right_border']
 TOP_BORDER = VALUES['top_border']
 BOTTOM_BORDER = VALUES['bottom_border']
+BOTTOM_X = VALUES['bottom_x']
+BOTTOM_L = VALUES['bottom_l']
+BOTTOM_R = VALUES['bottom_r']
+TOP_X = VALUES['top_x']
+TOP_L = VALUES['top_l']
+TOP_R = VALUES['top_r']
 HEADER = VALUES['header']
 ROW = VALUES['row']
 INTERSECTION = VALUES['intersection']
+HEADER_L = VALUES['header_l']
+HEADER_R = VALUES['header_r']
+LEFT_X = VALUES['left_x']
+RIGHT_X = VALUES['right_x']
 COLUMN = VALUES['column']
 WIDTH = VALUES['width']
 PADDING = VALUES['padding']
 
-    # else:
-    #     FNAME = sys.argv[1]
-if not FNAME:
-    sg.popup("Cancel", "No filename supplied")
-    raise SystemExit("Cancelling: no filename supplied")
-    # else:
-    # sg.popup('The filename you chose was', fname)
 
-# else:
-#     FNAME = sys.argv[1]
-
+# ERROR HANDLING, NO FILE SELECTED POPUP WINDOW
 if not FNAME:
-    sg.popup("Cancel", "No filename supplied")
+    sg.popup("Conversion canceled", "No filename supplied")
     raise SystemExit("Cancelling: no filename supplied")
+
 else:
 
     print(FNAME)
@@ -82,20 +97,21 @@ def read_error():
 
 
 def style_custom():
-    # my_table.left_border_char = LEFT_BORDER
-    # my_table.right_border_char = RIGHT_BORDER
-    # my_table.top_border_char = TOP_BORDER
-    # my_table.bottom_border_char = BOTTOM_BORDER
-    # my_table.header_separator_char = HEADER
-    # my_table.row_separator_char = ROW
-    # my_table.intersection_char = INTERSECTION
-    # my_table.column_separator_char = COLUMN
-
     my_table.border.left = LEFT_BORDER
     my_table.border.right = RIGHT_BORDER
-    my_table.border.top = TOP_BORDER
     my_table.border.bottom = BOTTOM_BORDER
-
+    my_table.border.bottom_junction = BOTTOM_X
+    my_table.border.bottom_left = BOTTOM_L
+    my_table.border.bottom_right = BOTTOM_R
+    my_table.border.top = TOP_BORDER
+    my_table.border.top_junction = TOP_X
+    my_table.border.top_left = TOP_L
+    my_table.border.top_right = TOP_R
+    my_table.border.header_left = HEADER_L
+    my_table.border.header_right = HEADER_R
+    my_table.border.left_junction = LEFT_X
+    my_table.border.right_junction = RIGHT_X
+    #my_table.BTColumnCollection.default_alignment =
 
 def error_file():
     pass
@@ -109,11 +125,10 @@ try:
         my_dataframe = pandas.read_csv(FNAME, skip_blank_lines=True)
         headers = list(my_dataframe)
         lists = my_dataframe.values.tolist()
-        my_table = beautifultable.BeautifulTable(maxwidth=WIDTH, default_padding=PADDING, )
-        my_table.column_headers = headers
+        my_table = beautifultable.BeautifulTable(maxwidth=WIDTH, default_padding=PADDING, headers=headers, default_alignment = beautifultable.ALIGN_LEFT )
         # WRITE TO TABLE
         for item in lists:
-            #my_table.append_row(item)
+            # my_table.append_row(item)
             my_table.rows.append(item)
         # OUTPUT RESULTS
         style_custom()

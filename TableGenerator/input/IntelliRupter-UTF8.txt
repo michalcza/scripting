@@ -1,0 +1,1216 @@
+=#########=########################################################################################=
+|  Code   |  Name - Definition                                                                     |
++---------+----------------------------------------------------------------------------------------+
+|  1      |  Pole 1 Open - On when Pole 1 interrupter contact status is Open. Otherwise off.Pole   |
+|         |  1 Open - On when Pole 1 interrupter contact status is Open. Otherwise  off.           |
++---------+----------------------------------------------------------------------------------------+
+|  2      |  Pole 1 Closed - On when Pole 1 interrupter contact status is Closed. Otherwise off.P  |
+|         |  ole 1 Closed - On when Pole 1 interrupter contact status is Closed. Otherwise  off.   |
++---------+----------------------------------------------------------------------------------------+
+|  3      |  Pole 2 Open - On when Pole 2 interrupter contact status is Open. Otherwise off.Pole   |
+|         |  2 Open - On when Pole 2 interrupter contact status is Open. Otherwise  off.           |
++---------+----------------------------------------------------------------------------------------+
+|  4      |  Pole 2 Closed - On when Pole 2 interrupter contact status is Closed. Otherwise off.P  |
+|         |  ole 2 Closed - On when Pole 2 interrupter contact status is Closed. Otherwise  off.   |
++---------+----------------------------------------------------------------------------------------+
+|  5      |  Pole 3 Open - On when Pole 3 interrupter contact status is Open. Otherwise off.Pole   |
+|         |  3 Open - On when Pole 3 interrupter contact status is Open. Otherwise  off.           |
++---------+----------------------------------------------------------------------------------------+
+|  6      |  Pole 3 Closed - On when Pole 3 interrupter contact status is Closed. Otherwise off.P  |
+|         |  ole 3 Closed - On when Pole 3 interrupter contact status is Closed. Otherwise  off.   |
++---------+----------------------------------------------------------------------------------------+
+|  7      |  IntelliRupter Fault Interrupter Open - All Poles - On when Pole 1 Pole 2 and Pole 3   |
+|         |  interrupter contact status is Open. Otherwise off.                                    |
++---------+----------------------------------------------------------------------------------------+
+|  8      |  IntelliRupter Fault Interrupter Closed - All Poles - On when Pole 1 Pole 2 and Pole   |
+|         |  3 interrupter contact status is Closed. Otherwise off.                                |
++---------+----------------------------------------------------------------------------------------+
+|  9      |  Manual Lever Locked Open - On when interrupter OPEN/CLOSE/READY lever is in the Open  |
+|         |   position. Off when lever is moved back to the Ready or Closed position.              |
++---------+----------------------------------------------------------------------------------------+
+|  10     |  Manual Disconnect Open - On when disconnect on disconnect style models is in the Ope  |
+|         |  n position. Otherwise off.                                                            |
++---------+----------------------------------------------------------------------------------------+
+|  11     |  General Profile 1 Active - On when the General Profile 1 setting is in effect. Other  |
+|         |  wise off.                                                                             |
++---------+----------------------------------------------------------------------------------------+
+|  12     |  General Profile 2 Active - On when the General Profile 2 setting is in effect. Other  |
+|         |  wise off.                                                                             |
++---------+----------------------------------------------------------------------------------------+
+|  13     |  General Profile 3 Active - On when the General Profile 3 setting is in effect. Other  |
+|         |  wise off.                                                                             |
++---------+----------------------------------------------------------------------------------------+
+|  14     |  General Profile 4 Active - On when the General Profile 4 setting is in effect. Other  |
+|         |  wise off.                                                                             |
++---------+----------------------------------------------------------------------------------------+
+|  15     |  Closing Profile 1 Active - On when the Closing Profile 1 setting is in effect after   |
+|         |  a Close command is issued by SCADA Wi - Fi external lever or automatic load restorat  |
+|         |  ion and the Time for Closing Profile to be Active timer has not expired.              |
++---------+----------------------------------------------------------------------------------------+
+|  16     |  Closing Profile 2 Active - On when the Closing Profile 2 setting is in effect after   |
+|         |  a Close command is issued by SCADA Wi - Fi external lever or automatic load restorat  |
+|         |  ion and the Time for Closing Profile to be Active timer has not expired.              |
++---------+----------------------------------------------------------------------------------------+
+|  17     |  Hot Line Tag Profile Active - On when the Hot Line Tag Profile state is in effect. O  |
+|         |  therwise off.                                                                         |
++---------+----------------------------------------------------------------------------------------+
+|  18     |  Ground Trip Blocked - On when the Ground Trip feature is blocked. Off when the Groun  |
+|         |  d Trip feature is enabled.                                                            |
++---------+----------------------------------------------------------------------------------------+
+|  19     |  Circuit Testing Blocked - On when the Circuit Testing feature is blocked or the Hot   |
+|         |  Line Tag state is applied. Off when the Circuit Testing feature is enabled and the H  |
+|         |  ot Line Tag state is removed.                                                         |
++---------+----------------------------------------------------------------------------------------+
+|  20     |  Test on Backfeed Blocked - On when the Test on Backfeed feature is blocked. Off when  |
+|         |   the Test on Backfeed feature is enabled.                                             |
++---------+----------------------------------------------------------------------------------------+
+|  21     |  2nd Closing Profile Selected - On when the Second Closing Profile setting is selecte  |
+|         |  d. Off when the First Closing Profile setting is selected. Note that a selected clos  |
+|         |  ing profile is different from an active closing profile.                              |
++---------+----------------------------------------------------------------------------------------+
+|  22     |  Hot Line Tag Active SCADA - On when the Hot Line Tag setting activated by a SCADA co  |
+|         |  mmand is in effect. Off when the Hot Line Tag setting is removed.                     |
++---------+----------------------------------------------------------------------------------------+
+|  23     |  Hot Line Tag Active IntelliLink - On when the Hot Line Tag setting activated by an I  |
+|         |  ntelliLink software command is in effect. Off when the Hot Line Tag setting is remov  |
+|         |  ed.                                                                                   |
++---------+----------------------------------------------------------------------------------------+
+|  24     |  Hot Line Tag Active Manual - On when the Hot Line Tag setting activated by a manual   |
+|         |  lever is in effect. Off when the Hot Line Tag setting is removed.                     |
++---------+----------------------------------------------------------------------------------------+
+|  25     |  Remote Operation On - On when the Remote Operation setting is on. Off when the Remot  |
+|         |  e Operation setting is off and only local control is permitted.                       |
++---------+----------------------------------------------------------------------------------------+
+|  26     |  Battery System Low - On when a routine battery test indicates low battery voltage. O  |
+|         |  therwise off. Battery Voltage set points are located on the Diagnostics>Control Powe  |
+|         |  r screen.                                                                             |
++---------+----------------------------------------------------------------------------------------+
+|  27     |  Battery System Bad - On when routine battery system test indicates inadequate batter  |
+|         |  y capacity; however the IntelliRupter fault interrupter will operate normally when p  |
+|         |  ower is available from the integrated power module(s). Otherwise off. The battery vo  |
+|         |  ltage set points are located on the Diagnostics>Control Power screen.                 |
++---------+----------------------------------------------------------------------------------------+
+|  28     |  Battery Charger Problem - On when a routine battery system test turns the charger of  |
+|         |  f because of overvoltage. Off when the next routine test does not detect overvoltage  |
+|         |  .                                                                                     |
++---------+----------------------------------------------------------------------------------------+
+|  29     |  AC Control Power Present - On Otherwise off. when there is output from the integrate  |
+|         |  d power module(s).                                                                    |
++---------+----------------------------------------------------------------------------------------+
+|  30     |  IntelliRupter Fault Interrupter Shut Down Due to Control Power Loss - On just before  |
+|         |   the IntelliRupter fault interrupter shuts down because of loss of line power and no  |
+|         |   battery power. Otherwise off.                                                        |
++---------+----------------------------------------------------------------------------------------+
+|  31     |  Trip on Loss of Control Energy - On when the IntelliRupter fault interrupter trips d  |
+|         |  ue to loss of control energy and there is no ac power. Off when the IntelliRupter fa  |
+|         |  ult interrupter closes or a command to close the IntelliRupter fault interrupter is   |
+|         |  received.                                                                             |
++---------+----------------------------------------------------------------------------------------+
+|  32     |  Source Loading Data Is Active - On when the real - time feeder loading logic is acti  |
+|         |  ve and in use. This point does not indicate whether the control is using actual real  |
+|         |   - time feeder - loading data received from a DNP master or the Default Source Segme  |
+|         |  nt Loading setting. Otherwise off.                                                    |
++---------+----------------------------------------------------------------------------------------+
+|  33     |  Real - Time Load Data May Be Old or Abnormal - On when the received DNP analog outpu  |
+|         |  t value is less than the real - time three - phase load as sensed by the switch. It   |
+|         |  is also set if the real - time feeder - loading data have not updated within the con  |
+|         |  figured time interval. Off when new data are received and the analog value is equal   |
+|         |  to or greater than the local measured load. Otherwise off.                            |
++---------+----------------------------------------------------------------------------------------+
+|  34     |  Overcurrent Timing - On when any overcurrent element is timing. Otherwise off.        |
++---------+----------------------------------------------------------------------------------------+
+|  35     |  Overcurrent Current Pole 1 - On if this pole was timing and >20% of trip and a Phase  |
+|         |   - Overcurrent element has tripped for this pole or another pole. On if the Phase -   |
+|         |  Overcurrent element for this pole was timing prior to a Ground - Overcurrent or Nega  |
+|         |  tive - Sequence element trip. Off when Phase - Overcurrent elements were not timing   |
+|         |  prior to trip the IntelliRupter PulseCloser Fault Interrupter closes or a command to  |
+|         |   close the IntelliRupter fault interrupter is given.                                  |
++---------+----------------------------------------------------------------------------------------+
+|  36     |  Overcurrent Current Pole 2 - On if this pole was timing and >20% of trip and a Phase  |
+|         |   - Overcurrent element has tripped for this pole or another pole. On if the Phase -   |
+|         |  Overcurrent element for this pole was timing prior to a Ground - Overcurrent or Nega  |
+|         |  tive - Sequence element trip. Off when Phase - Overcurrent elements were not timing   |
+|         |  prior to trip the IntelliRupter PulseCloser Fault Interrupter closes or a command to  |
+|         |   close the IntelliRupter fault interrupter is given.                                  |
++---------+----------------------------------------------------------------------------------------+
+|  37     |  Overcurrent Current Pole 3 - On if this pole was timing and >20% of trip and a Phase  |
+|         |   - Overcurrent element has tripped for this pole or another pole. On if the Phase -   |
+|         |  Overcurrent element for this pole was timing prior to a Ground - Overcurrent or Nega  |
+|         |  tive - Sequence element trip. Off when Phase - Overcurrent elements were not timing   |
+|         |  prior to trip the IntelliRupter PulseCloser Fault Interrupter closes or a command to  |
+|         |   close the IntelliRupter fault interrupter is given.                                  |
++---------+----------------------------------------------------------------------------------------+
+|  38     |  Overcurrent Trip Any Pole - On when any Overcurrent element on Pole 1 Pole 2 or Pole  |
+|         |   3 has tripped. Off when the IntelliRupter fault interrupter closes or a command to   |
+|         |  close the IntelliRupter fault interrupter is given.                                   |
++---------+----------------------------------------------------------------------------------------+
+|  39     |  Tripped to Lockout - On when the IntelliRupter fault interrupter is in the Lockout s  |
+|         |  tate as the result of an event and the IntelliTeam system begins the reconfiguration  |
+|         |   process. Off when a Close command is received.                                       |
++---------+----------------------------------------------------------------------------------------+
+|  40     |  Voltage Timing - On when any Voltage element is timing. Otherwise off.                |
++---------+----------------------------------------------------------------------------------------+
+|  41     |  Voltage Trip - On when a Voltage element trips. Off when a Close command is received  |
+|         |  .                                                                                     |
++---------+----------------------------------------------------------------------------------------+
+|  42     |  Frequency Timing - On when any Frequency element is timing. Otherwise off.            |
++---------+----------------------------------------------------------------------------------------+
+|  43     |  Frequency Trip - On when any Frequency element trips. Off when a Close command is re  |
+|         |  ceived.                                                                               |
++---------+----------------------------------------------------------------------------------------+
+|  44     |  Sectionalizing Timing - On when any Sectionalizing element is timing. Otherwise off.  |
++---------+----------------------------------------------------------------------------------------+
+|  45     |  Sectionalizing Trip - On when any Sectionalizing element trips. Off when a Close com  |
+|         |  mand is received.                                                                     |
++---------+----------------------------------------------------------------------------------------+
+|  46     |  IntelliRupter Fault Interrupter Alarm - On when any alarm is active. Turned off auto  |
+|         |  matically when the problem that caused the alarm is resolved.                         |
++---------+----------------------------------------------------------------------------------------+
+|  47     |  IntelliRupter Fault Interrupter Warning - On when any warning is active. Turned off   |
+|         |  automatically when the problem that caused the warning is resolved.                   |
++---------+----------------------------------------------------------------------------------------+
+|  48     |  IntelliRupter Fault Interrupter Error - On when any error is active. Turned off by a  |
+|         |   user action to clear the error.                                                      |
++---------+----------------------------------------------------------------------------------------+
+|  49     |  Good Source Voltage - Terminal X - On when the X - side terminal voltages equal or e  |
+|         |  xceed the Source Voltage Indication setting for the active profile. Otherwise off.    |
++---------+----------------------------------------------------------------------------------------+
+|  50     |  Good Source Voltage - Terminal Y - On when the Y - side terminal voltages equal or e  |
+|         |  xceed the Source Voltage Indication setting for the active profile. Otherwise off.    |
++---------+----------------------------------------------------------------------------------------+
+|  51     |  Wi - Fi Is Connected - On when a Wi - Fi connection to the IntelliRupter fault inter  |
+|         |  rupter is established. Otherwise off.                                                 |
++---------+----------------------------------------------------------------------------------------+
+|  52     |  Wi - Fi Intrusion Alarm - On when the Wi - Fi module reports a replay attack or impr  |
+|         |  oper authentication. Turned off by the user with control point 21 Clear Wi - Fi Intr  |
+|         |  usion Alarm.                                                                          |
++---------+----------------------------------------------------------------------------------------+
+|  53     |  Testing - On when the IntelliRupter fault interrupter is circuit testing. Off when t  |
+|         |  he IntelliRupter fault interrupter closes or a command to close the IntelliRupter fa  |
+|         |  ult interrupter is given.                                                             |
++---------+----------------------------------------------------------------------------------------+
+|  54     |  Close Blocked by Synch. Check - On when the Close operation is blocked by the Synch.  |
+|         |   Check feature (i.e. different voltage magnitude phase angle or frequency on each si  |
+|         |  de of the IntelliRupter fault interrupter). Off when a Close command is received.     |
++---------+----------------------------------------------------------------------------------------+
+|  55     |  Pulseclosing Fault Detected - On when a fault is detected during the PulseClosing Te  |
+|         |  chnology operation. Off when the IntelliRupter fault interrupter closes or a Close c  |
+|         |  ommand is received.                                                                   |
++---------+----------------------------------------------------------------------------------------+
+|  56     |  IntelliTeam Prohibit Restoration Timer Exceeded - On when the Prohibit Restoration T  |
+|         |  imer expires for any team in which this IntelliRupter fault interrupter is a member.  |
+|         |   Countdown starts when a transfer process begins at the team usually when a sectiona  |
+|         |  lizing event occurs. Timers in adjacent teams may start simultaneously. Each team de  |
+|         |  crements its timer independently so teams can potentially enter the Prohibit Restora  |
+|         |  tion state asynchronously. Off when local manual operations have been cleared all lo  |
+|         |  cal trouble indications are cleared and the Prohibit Restoration state is not active  |
+|         |   locally.                                                                             |
++---------+----------------------------------------------------------------------------------------+
+|  57     |  IntelliTeam Prohibit Restoration Enabled - On when the IntelliRupter fault interrupt  |
+|         |  er receives a Prohibit Restoration command locally or from SCADA. No switch on any t  |
+|         |  eam in which this IntelliRupter fault interrupter is a member is allowed to automati  |
+|         |  cally close preventing automatic load restoration. Off when the Prohibit Restoration  |
+|         |   feature receives a SCADA Latch - Off command.                                        |
++---------+----------------------------------------------------------------------------------------+
+|  58     |  Setup Data Revision - On when the configuration entries for any enabled team defined  |
+|         |   in the control are modified. It remains on until the Team Setup parameter on the Se  |
+|         |  tup>Team screen has been toggled from Stopped mode back to Running mode for any team  |
+|         |   where the configuration entries have been changed. Otherwise off.                    |
++---------+----------------------------------------------------------------------------------------+
+|  59     |  IntelliTeam Automatic Transfer In Progress - On when any team defined in the Intelli  |
+|         |  Rupter fault interrupter is actively performing an Automatic Transfer operation. Oth  |
+|         |  erwise off.                                                                           |
++---------+----------------------------------------------------------------------------------------+
+|  60     |  IntelliTeam Return To Normal In Progress - On when any team defined in the IntelliRu  |
+|         |  pter fault interrupter is actively performing a Return - to - Normal operation. Othe  |
+|         |  rwise off.                                                                            |
++---------+----------------------------------------------------------------------------------------+
+|  61     |  IntelliTeam Fault Pole 1 - On when the Phase - Overcurrent element on Pole 1 or any   |
+|         |  of the Negative Sequence Ground or Sensitive Earth Overcurrent elements exceed 50% o  |
+|         |  f the trip time setting. Turned off by the IntelliTeam system.                        |
++---------+----------------------------------------------------------------------------------------+
+|  62     |  IntelliTeam Fault Pole 2 - On when the Phase - Overcurrent element on Pole 2 or any   |
+|         |  of the Negative Sequence Ground or Sensitive Earth Overcurrent elements exceed 50% o  |
+|         |  f the trip time setting. Turned off by the IntelliTeam system.                        |
++---------+----------------------------------------------------------------------------------------+
+|  63     |  IntelliTeam Fault Pole 3 - On when the Phase - Overcurrent element on Pole 3 or any   |
+|         |  of the Negative Sequence Ground or Sensitive Earth Overcurrent elements exceed 50% o  |
+|         |  f the trip time setting. Turned off by the IntelliTeam system.                        |
++---------+----------------------------------------------------------------------------------------+
+|  64     |  IntelliTeam Team Member Not Transfer Ready - On when an IntelliRupter fault interrup  |
+|         |  ter operation is not consistent with the expected team operation. A variety of manua  |
+|         |  l operations will take the IntelliRupter fault interrupter out of the Ready state. O  |
+|         |  ff when local manual operations and all local trouble indications have been cleared.  |
++---------+----------------------------------------------------------------------------------------+
+|  65     |  Not All IntelliTeam Teams Transfer Ready - On when any team in which this IntelliRup  |
+|         |  ter fault interrupter is a member is not fully operational. This may be due to condi  |
+|         |  tions of individual team members team - wide conditions such as the isolation of a f  |
+|         |  ault or during configuration or coordination problems or when the IntelliTeam SG Res  |
+|         |  toration system is set to the Disabled state on the IntelliTeam SG>Team Summary scre  |
+|         |  en. Off when all conditions that caused this status point to be set initially have b  |
+|         |  een cleared. Unless otherwise prohibited team member IntelliRupter fault interrupter  |
+|         |  s will revert to standalone basic protection when the Not Transfer Ready state is ac  |
+|         |  tive whether due to local conditions or conditions at adjacent team members.          |
++---------+----------------------------------------------------------------------------------------+
+|  66     |  IntelliTeam Team 1 Transfer Ready - On when team 1 is in the Ready to Transfer state  |
+|         |  . Off when any member of team 7 is set to Manual Operation mode has any trouble indi  |
+|         |  cation active has the Prohibit Restoration state active or when the line section rep  |
+|         |  resented by team 7 contains a fault.                                                  |
++---------+----------------------------------------------------------------------------------------+
+|  67     |  IntelliTeam Team 2 Transfer Ready - On when team 2 is in the Ready to Transfer state  |
+|         |  . Off when any member of team 7 is set to Manual Operation mode has any trouble indi  |
+|         |  cation active has the Prohibit Restoration state active or when the line section rep  |
+|         |  resented by team 7 contains a fault.                                                  |
++---------+----------------------------------------------------------------------------------------+
+|  68     |  IntelliTeam Team 3 Transfer Ready - On when team 3 is in the Ready to Transfer state  |
+|         |  . Off when any member of team 7 is set to Manual Operation mode has any trouble indi  |
+|         |  cation active has the Prohibit Restoration state active or when the line section rep  |
+|         |  resented by team 7 contains a fault.                                                  |
++---------+----------------------------------------------------------------------------------------+
+|  69     |  IntelliTeam Team 4 Transfer Ready - On when team 4 is in the Ready to Transfer state  |
+|         |  . Off when any member of team 7 is set to Manual Operation mode has any trouble indi  |
+|         |  cation active has the Prohibit Restoration state active or when the line section rep  |
+|         |  resented by team 7 contains a fault.                                                  |
++---------+----------------------------------------------------------------------------------------+
+|  70     |  IntelliTeam Team 5 Transfer Ready - On when team 5 is in the Ready to Transfer state  |
+|         |  . Off when any member of team 7 is set to Manual Operation mode has any trouble indi  |
+|         |  cation active has the Prohibit Restoration state active or when the line section rep  |
+|         |  resented by team 7 contains a fault.                                                  |
++---------+----------------------------------------------------------------------------------------+
+|  71     |  IntelliTeam Team 6 Transfer Ready - On when team 6 is in the Ready to Transfer state  |
+|         |  . Off when any member of team 7 is set to Manual Operation mode has any trouble indi  |
+|         |  cation active has the Prohibit Restoration state active or when the line section rep  |
+|         |  resented by team 7 contains a fault.                                                  |
++---------+----------------------------------------------------------------------------------------+
+|  72     |  IntelliTeam Team 7 Transfer Ready - On when team 7 is in the Ready to Transfer state  |
+|         |  . Off when any member of team 7 is set to Manual Operation mode has any trouble indi  |
+|         |  cation active has the Prohibit Restoration state active or when the line section rep  |
+|         |  resented by team 7 contains a fault.                                                  |
++---------+----------------------------------------------------------------------------------------+
+|  73     |  IntelliTeam Team 8 Transfer Ready - On when team 8 is in the Ready to Transfer state  |
+|         |  . Off when any member of team 7 is set to Manual Operation mode has any trouble indi  |
+|         |  cation active has the Prohibit Restoration state active or when the line section rep  |
+|         |  resented by team 7 contains a fault.                                                  |
++---------+----------------------------------------------------------------------------------------+
+|  74     |  IntelliTeam Manual Operation Team Condition - On when any member of a team registers  |
+|         |   a manual Open or Close switch operation that puts that team in the not Ready state.  |
+|         |   Some manual operations will not cause this condition such as closing a source switc  |
+|         |  h on a previously faulted team to allow a Return To Normal operation when the Return  |
+|         |   To Normal state is Enabled. Turned off by using the Clear Manual Operation button o  |
+|         |  n the IntelliTeam SG>Team Summary screen. Also turned off by issuing SCADA control p  |
+|         |  oint #23 IntelliTeam Clear Manual Operation.                                          |
++---------+----------------------------------------------------------------------------------------+
+|  75     |  Sensitive Earth Trip Blocked - On when the Sensitive Earth Trip feature is blocked.   |
+|         |  Off when the Sensitive Earth Trip feature is enabled.                                 |
++---------+----------------------------------------------------------------------------------------+
+|  76     |  Overcurrent Timing - Sensitive Earth Fault - On when the Sensitive Earth element is   |
+|         |  timing. Otherwise off.                                                                |
++---------+----------------------------------------------------------------------------------------+
+|  77     |  Overcurrent Trip - Sensitive Earth Fault - On when the Sensitive Earth element trips  |
+|         |  . Off when the IntelliRupter fault interrupter closes or a Close command is received  |
+|         |  .                                                                                     |
++---------+----------------------------------------------------------------------------------------+
+|  78     |  Tripped to Lockout - Sensitive Earth Fault - On when the IntelliRupter fault interru  |
+|         |  pter locks out as the result of a Sensitive Earth Trip element and the IntelliTeam s  |
+|         |  ystem begins the reconfiguration process. Off when a Close command is received.       |
++---------+----------------------------------------------------------------------------------------+
+|  79     |  Loop Restoration Enabled - On when the Loop Restoration system is enabled. Otherwise  |
+|         |   off.                                                                                 |
++---------+----------------------------------------------------------------------------------------+
+|  80     |  Loop Restoration Ready - On when the Loop Restoration system is in the Ready state.   |
+|         |  Otherwise off.                                                                        |
++---------+----------------------------------------------------------------------------------------+
+|  81     |  Loop Restoration Timing - On when the loop restoration timer is running. Otherwise o  |
+|         |  ff.                                                                                   |
++---------+----------------------------------------------------------------------------------------+
+|  82     |  Loop Restoration Reconfigured - On when the Loop Restoration system closes a normall  |
+|         |  y open device a normally open device locks out after testing a normally closed devic  |
+|         |  e opens and locks out or a normally closed device trips then closes and is now servi  |
+|         |  ng load in the opposite direction. Otherwise off. This point is reset when a manual   |
+|         |  Open or Close command is received.                                                    |
++---------+----------------------------------------------------------------------------------------+
+|  83     |  Current Flowing In Direction 1 - On when current flows in Direction 1 as configured   |
+|         |  for this IntelliRupter fault interrupter on the Setup>General screen. Otherwise off.  |
++---------+----------------------------------------------------------------------------------------+
+|  84     |  Current Flowing In Direction 2 - On when current flows in Direction 2 as configured   |
+|         |  for this IntelliRupter fault interrupter on the Setup>General screen. Otherwise off.  |
++---------+----------------------------------------------------------------------------------------+
+|  85     |  Close Blocked Due to Pulseclosing Not Available - On when a closing operation is blo  |
+|         |  cked due to a PulseClosing Technology operation not being available and the user set  |
+|         |  ting for Conventional Close if PulseClosing Not Available is set to No. The switch c  |
+|         |  an still be closed by issuing a command that does not use a PulseClosing Technology   |
+|         |  operation. Off when a successful Close operation is performed.                        |
++---------+----------------------------------------------------------------------------------------+
+|  86     |  Current Restraint - Phase - On when the Phase - Current Restraint mode is in effect   |
+|         |  for single - phase tripping. Otherwise off.                                           |
++---------+----------------------------------------------------------------------------------------+
+|  87     |  Current Restraint - Ground - On when the Ground - Current Restraint mode is in effec  |
+|         |  t for single - phase tripping. Otherwise off.                                         |
++---------+----------------------------------------------------------------------------------------+
+|  88     |  Lockout - Pole 1 - On when Pole 1 is in the Lockout state. Otherwise off.             |
++---------+----------------------------------------------------------------------------------------+
+|  89     |  Lockout - Pole 2 - On when Pole 2 is in the Lockout state. Otherwise off.             |
++---------+----------------------------------------------------------------------------------------+
+|  90     |  Lockout - Pole 3 - On when Pole 3 is in the Lockout state. Otherwise off.             |
++---------+----------------------------------------------------------------------------------------+
+|  91     |  Pulse Detected Fault - Pole 1 - On when a fault is detected during a test sequence o  |
+|         |  r close attempt by a PulseClosing Technology operation on Pole 1. This point is clea  |
+|         |  red by the next successful close operation on Pole 1.                                 |
++---------+----------------------------------------------------------------------------------------+
+|  92     |  Pulse Detected Fault - Pole 2 - On when a fault is detected during a test sequence o  |
+|         |  r close attempt by a PulseClosing Technology operation on Pole 2. This point is clea  |
+|         |  red by the next successful close operation on Pole 2.                                 |
++---------+----------------------------------------------------------------------------------------+
+|  93     |  Pulse Detected Fault - Pole 3 - On when a fault is detected during a test sequence o  |
+|         |  r close attempt by a PulseClosing Technology operation on Pole 3. This point is clea  |
+|         |  red by the next successful close operation on Pole 3.                                 |
++---------+----------------------------------------------------------------------------------------+
+|  94     |  Single - Phase Operation Blocked - On when a Single - Phase Operation function is bl  |
+|         |  ocked. Otherwise off.                                                                 |
++---------+----------------------------------------------------------------------------------------+
+|  95     |  Ground Trip Block Lever Applied - On when the GROUND TRIP BLOCK lever is applied. Ot  |
+|         |  herwise off.                                                                          |
++---------+----------------------------------------------------------------------------------------+
+|  96     |  Battery Disconnected - On when the battery is disconnected or no battery is installe  |
+|         |  d. Otherwise off.                                                                     |
++---------+----------------------------------------------------------------------------------------+
+|  97     |  Battery Test In Progress - On when a battery test is performed. Otherwise off.        |
++---------+----------------------------------------------------------------------------------------+
+|  98     |  GPS Not Active Time Source - On when the GPS feature is not the active time source.   |
+|         |  Otherwise off.                                                                        |
++---------+----------------------------------------------------------------------------------------+
+|  99     |  Communication Test - Toggles the state each time a Test Communication (control point  |
+|         |   41) command is received. The initial state on power up is off.                       |
++---------+----------------------------------------------------------------------------------------+
+|  100    |  Wi - Fi Disabled by SCADA - On when a Disable Wi - Fi (control point 42) command is   |
+|         |  received. Off when a Enable Wi - Fi (control point 43) command is received. An Enabl  |
+|         |  e/Disable Wi - Fi (control point 45) command toggles Wi - Fi communication on and of  |
+|         |  f; on when Wi - Fi is disabled and off when Wi - Fi is enabled. Otherwise off.        |
++---------+----------------------------------------------------------------------------------------+
+|  101    |  Site Acceptance Test: Script Active - On when an SAT Script has been received and th  |
+|         |  e SAT Manager issues a Start Test command. Otherwise off.                             |
++---------+----------------------------------------------------------------------------------------+
+|  102    |  Site Acceptance Test: Switch Closed - On when the SAT process sees a Closed switch s  |
+|         |  tatus.                                                                                |
++---------+----------------------------------------------------------------------------------------+
+|  103    |  Site Acceptance Test: Switch Open - On when the SAT process sees an Open switch stat  |
+|         |  us.                                                                                   |
++---------+----------------------------------------------------------------------------------------+
+|  104    |  Site Acceptance Test: Test Prohibited - On when the IntelliLink screenset locally pr  |
+|         |  ohibits all SAT activity. All requests issued from the SAT Manager are ignored. Othe  |
+|         |  rwise off.                                                                            |
++---------+----------------------------------------------------------------------------------------+
+|  105    |  Netlist Missing Runners - On when the received runner count doesn ™t match the expec  |
+|         |  ted runner count. The Rapid Self Healing feature is disabled as long as this is the   |
+|         |  case. Otherwise off.                                                                  |
++---------+----------------------------------------------------------------------------------------+
+|  106    |  Netlist Settings Propagation - On when the local control is receiving Netlist record  |
+|         |  s from either a download or through propagation. If this is a Netlist download the s  |
+|         |  tatus point remains on until all expected runners arrive with the new Netlist. Other  |
+|         |  wise off.                                                                             |
++---------+----------------------------------------------------------------------------------------+
+|  107    |  Netlist Settings Accepted - On when a new Netlist has been successfully validated. O  |
+|         |  ff when a Netlist is being downloaded or propagated. Off if the user has changed any  |
+|         |   team settings so they are different from the screenset.                              |
++---------+----------------------------------------------------------------------------------------+
+|  108    |  Netlist Propagation Enabled - On when the IntelliLink software screenset or SCADA en  |
+|         |  ables Netlist propagation. Otherwise off. (Starting with Revision 7.1.x the Netlist   |
+|         |  Propagation mode is always in the Enabled state; therefore this status point is alwa  |
+|         |  ys on.)                                                                               |
++---------+----------------------------------------------------------------------------------------+
+|  109    |  IntelliTeam II Mode Active - On when IntelliTeam II software is in use. Otherwise of  |
+|         |  f.                                                                                    |
++---------+----------------------------------------------------------------------------------------+
+|  110    |  IntelliTeam Overload Alarm - On when the Post Restoration Load Management system is   |
+|         |  operational the substation feeder is supplying sections that it does not normally su  |
+|         |  pply and an overload condition has been present when sampled for 10 consecutive time  |
+|         |  s 10 seconds apart. The alarm is cleared the first time an overload condition is not  |
+|         |   present when sampled or when the feeder is no longer supplying the extra sections.   |
++---------+----------------------------------------------------------------------------------------+
+|  111    |  Close Blocked Due to Insufficient Energy - On when a Close operation is prevented be  |
+|         |  cause of insufficient storage capacitor energy.                                       |
++---------+----------------------------------------------------------------------------------------+
+|  112    |  Communication Enhanced Coordination Ready - On when a closed IntelliRupter fault int  |
+|         |  errupter is active on a General Profile configured for CEC in at least one direction  |
+|         |   and all source - side IntelliRupter fault interrupters are closed and active on the  |
+|         |   same General Profile as this IntelliRupter fault interrupter. Otherwise off.         |
++---------+----------------------------------------------------------------------------------------+
+|  113    |  Communication Enhanced Coordination Shift for X Terminal - On when the IntelliRupter  |
+|         |   fault interrupter shifts to the slower curve for the X terminal. Otherwise off.      |
++---------+----------------------------------------------------------------------------------------+
+|  114    |  Communication Enhanced Coordination Shift for Y Terminal - On when the IntelliRupter  |
+|         |   fault interrupter shifts to the slower curve for the Y terminal. Otherwise off.      |
++---------+----------------------------------------------------------------------------------------+
+|  115    |  Ground Overcurrent Trip - On when the Ground Overcurrent element trips. Off when Int  |
+|         |  elliRupter fault interrupter closes or a Close command is received.                   |
++---------+----------------------------------------------------------------------------------------+
+|  116    |  Negative Sequence Overcurrent Trip - On when the Negative Sequence Overcurrent eleme  |
+|         |  nt trips. Off when IntelliRupter fault interrupter closes or a Close command is rece  |
+|         |  ived.                                                                                 |
++---------+----------------------------------------------------------------------------------------+
+|  117    |  Definite Time Overcurrent Trip - On when any Definite Time Overcurrent element trips  |
+|         |  . Off when the IntelliRupter fault interrupter closes or a Close command is received  |
+|         |  .                                                                                     |
++---------+----------------------------------------------------------------------------------------+
+|  118    |  IT Out of Normal Switch State - On when the switch state is not in the Normally Open  |
+|         |   or Normally Closed state for the IntelliTeam system. Off when the switch state is t  |
+|         |  he Normally Open or Normally Close switch state for the IntelliTeam system.           |
++---------+----------------------------------------------------------------------------------------+
+|  119    |  Overcurrent Fault Detected - On when the fault - detection circuitry detects a Line   |
+|         |  Fault condition the SCADA operator has not reset. For a normally closed switch line   |
+|         |  fault conditions clear automatically once three - phase line voltage has been sensed  |
+|         |   the switch is in the Closed position and 45 minutes have elapsed. For a normally op  |
+|         |  en or normally closed switch click on one of these options to manually clear the fau  |
+|         |  lt: the Clear Faults command in the LCD menu the Clear Faults button on the Setup>Si  |
+|         |  te Related screen or the faceplate/screenset pre - assigned User Command button. Not  |
+|         |  e: The Fault condition also clears if the conditions above are met and the Clear Lat  |
+|         |  ched Overcurrent Status (control point 46) command is sent.                           |
++---------+----------------------------------------------------------------------------------------+
+|  120    |  PLI Open - On when the switch has been opened by the Phase - Loss Isolation (PLI) lo  |
+|         |  gic. Otherwise off.                                                                   |
++---------+----------------------------------------------------------------------------------------+
+|  121    |  Loop Restoration Close Blocked “Underfrequency - On when a Loop Restoration close at  |
+|         |  tempt is blocked due to low frequency detection. Off when the IntelliRupter fault in  |
+|         |  terrupter closes a Close command is received or the Loop Restoration setting is enab  |
+|         |  led by a manual - lever operation or by a Wi - Fi or SCADA command.                   |
++---------+----------------------------------------------------------------------------------------+
+|  122    |  Any Automatic Timer in Progress - On when any of these timers is active: Overcurrent  |
+|         |   Timing Voltage Timing Frequency Timing Sectionalizing Timing Loop Restoration Timin  |
+|         |  g IntelliTeam Transfer in Progress IntelliTeam Return to Normal in Progress Fault Cy  |
+|         |  cling Pulse Test or a shutdown is in progress because the Open Under Loss of Control  |
+|         |   Energy setting is enabled.                                                           |
++---------+----------------------------------------------------------------------------------------+
+|  123    |  Low Single - Phase Low Voltage Alert - On when voltage is below the Low Single - Pha  |
+|         |  se Low Voltage Threshold setting for one second. Off when voltage is above the thres  |
+|         |  hold. To avoid flooding the logs and creating excessive SCADA alerts when the voltag  |
+|         |  e is hovering at the threshold level the DNP point is not allowed more than one tran  |
+|         |  sition (on or off) per minute. The value is computed every second but the alert chec  |
+|         |  ks and reports once every 30 seconds. This is configured on the Voltage Trip screen.  |
++---------+----------------------------------------------------------------------------------------+
+|  124    |  Low Three - Phase Low Voltage Alert - On when voltage is below the Low Three - Phase  |
+|         |   Low Voltage Threshold setting for one second. Off when voltage is above the thresho  |
+|         |  ld. To avoid flooding the logs and creating excessive SCADA alerts when the voltage   |
+|         |  is hovering at the threshold level the DNP point is not allowed more than one transi  |
+|         |  tion (on or off) per minute. The value is computed every second but the alert checks  |
+|         |   and reports once every 30 seconds. This is configured on the Voltage Trip screen.    |
++---------+----------------------------------------------------------------------------------------+
+|  125    |  Phase Overcurrent Alert - On when the Phase Overcurrent Alert setting is selected in  |
+|         |   the active general protection profile and phase current on any phase in either dire  |
+|         |  ction is above the alert value. The value is computed every second but the alert che  |
+|         |  cks and reports once every 30 seconds. This is configured on the Initial Trip screen  |
+|         |  .                                                                                     |
++---------+----------------------------------------------------------------------------------------+
+|  126    |  Ground Overcurrent Alert - On when the Ground Overcurrent Alert setting is checked i  |
+|         |  n the active general protection profile and ground current in either direction is ab  |
+|         |  ove the alert value. The value is computed every second but the alert checks and rep  |
+|         |  orts once every 30 seconds. This is configured on the Initial Trip screen.            |
++---------+----------------------------------------------------------------------------------------+
+|  127    |  Ground Overcurrent Timing - On when the Ground Overcurrent element is timing. Otherw  |
+|         |  ise off.                                                                              |
++---------+----------------------------------------------------------------------------------------+
+|  128    |  Phase Pole 1 Overcurrent Timing - On when the Pole 1 Phase Overcurrent element is ti  |
+|         |  ming. Otherwise off.                                                                  |
++---------+----------------------------------------------------------------------------------------+
+|  129    |  Phase Pole 2 Overcurrent Timing - On when the Pole 2 Phase Overcurrent element is ti  |
+|         |  ming. Otherwise off.                                                                  |
++---------+----------------------------------------------------------------------------------------+
+|  130    |  Phase Pole 3 Overcurrent Timing - On when the Pole 3 Phase Overcurrent element is ti  |
+|         |  ming. Otherwise off.                                                                  |
++---------+----------------------------------------------------------------------------------------+
+|  131    |  Phase Any Pole Overcurrent Timing - On when any Phase Overcurrent element is timing.  |
+|         |   Otherwise off.                                                                       |
++---------+----------------------------------------------------------------------------------------+
+|  132    |  Phase Any Pole Overcurrent Tripped - On when any Phase Overcurrent element trips. Of  |
+|         |  f when the IntelliRupter fault interrupter closes a Close command is received or con  |
+|         |  trol point 44 is received.                                                            |
++---------+----------------------------------------------------------------------------------------+
+|  133    |  IntelliTeam SG Close Blocked “Underfrequency - On when IntelliTeam SG operation is p  |
+|         |  rohibited because of low frequency detection. Off when IntelliTeam SG system operati  |
+|         |  on is enabled by a Wi - Fi or SCADA command.                                          |
++---------+----------------------------------------------------------------------------------------+
+|  134    |  Open - Source Sectionalizing Blocked - On when the Open - Source Sectionalizing elem  |
+|         |  ent is in the Blocked state. Off when the Open - Source Sectionalizing element is in  |
+|         |   the Enabled state. When enabled the Open - Source Sectionalizing element will only   |
+|         |  function if Open - Source Sectionalizing is configured in the active profile.         |
++---------+----------------------------------------------------------------------------------------+
+|  135    |  Comm System has Poor Quality - On when the Bad Health alarm is active on the Link Ke  |
+|         |  ep Alive Tests screen and/or the Diagnostic Communications Tests screen. Otherwise o  |
+|         |  ff.                                                                                   |
++---------+----------------------------------------------------------------------------------------+
+|  136    |  VS - SEF Alert X - On when the Voltage Supervised Sens Earth Disable Trip check box   |
+|         |  is checked and the Voltage Supervised Sens Earth logic has been satisfied for the X   |
+|         |  direction. The alert automatically resets when the logic is no longer satisfied.      |
++---------+----------------------------------------------------------------------------------------+
+|  137    |  VS - SEF Alert Y - On when the Voltage Supervised Sens Earth Disable Trip check box   |
+|         |  is checked and the Voltage Supervised Sens Earth logic has been satisfied for the Y   |
+|         |  direction. The alert automatically resets when the logic is no longer satisfied.      |
++---------+----------------------------------------------------------------------------------------+
+|  138    |  IntelliLink Intrusion - On when an IntelliLink software log in attempt failed 3 time  |
+|         |  s. Then all users are locked out for 1.5 minutes. Otherwise off.                      |
++---------+----------------------------------------------------------------------------------------+
+|  139    |  IntelliLink Session Active - On when user is presently logged in to the control. Oth  |
+|         |  erwise off.                                                                           |
++---------+----------------------------------------------------------------------------------------+
+|  140    |  External Port Linked - On when the External Interface Assembly is detected and the h  |
+|         |  andshake message with the control module is received at least every 30 seconds. Othe  |
+|         |  rwise off.                                                                            |
++---------+----------------------------------------------------------------------------------------+
+|  141    |  Not all Team Xfer Ready for X sec - At least one of the active teams where the local  |
+|         |   control is a member is not in the Ready state for greater than the configured time.  |
+|         |   Otherwise off.                                                                       |
++---------+----------------------------------------------------------------------------------------+
+|  142    |  Close Pending Sync Check - When the Sync Check Enabled mode set to the Yes option an  |
+|         |  d the IntelliRupter fault interrupter is open if a Close or Sync Check Close command  |
+|         |   is not achieved before the Wait Timer setpoint expires the Close command is discard  |
+|         |  ed and this point is set to on. This remains on until a subsequent Close command is   |
+|         |  issued.                                                                               |
++---------+----------------------------------------------------------------------------------------+
+|  143    |  PR Remotely Transmitted - On when the local device sends the Prohibit Restoration SC  |
+|         |  ADA command to remote devices in the Remote Prohibit Restoration Transmit List ***Ta  |
+|         |  ble because of an active Hot Line Tag Frequency Trip or Manual Operation state or wh  |
+|         |  en a Prohibit Restoration state is activated via a front panel IntelliLink software   |
+|         |  screen or SCADA command. The status point is cleared when the device receives a Clea  |
+|         |  r Remote Prohibit Restoration Status command from SCADA. Status point = 0x1F00        |
++---------+----------------------------------------------------------------------------------------+
+|  144    |  Enable Restoration Remotely Transmitted - On when the local device sends the Clear R  |
+|         |  emote Prohibit Restoration Status command to remote devices in the Remote Prohibit R  |
+|         |  estoration Transmit List ***Table. This event can be triggered by executing a Clear   |
+|         |  Remote Prohibit Restoration Status command via IntelliLink software or receiving an   |
+|         |  IT Clear PR to all Devices command from SCADA. The status point is cleared when the   |
+|         |  device receives the Clear Remote Enable Restoration Status control point. Status poi  |
+|         |  nt = 0x1F01                                                                           |
++---------+----------------------------------------------------------------------------------------+
+|  145    |  Pickup and Lockout Direction X - On when any element has picked up and locked out fo  |
+|         |  r a fault in direction X. Off when all elements and lockout are reset.                |
++---------+----------------------------------------------------------------------------------------+
+|  146    |  Pickup and Lockout Direction Y - On when any element has picked up and locked out fo  |
+|         |  r a fault in direction Y. Off when all elements and lockout are reset.                |
++---------+----------------------------------------------------------------------------------------+
+|  147    |  Phasor Data Captured - This point is used by the IntelliTeam FMS Feeder Management S  |
+|         |  ystem. Map this point and configure the unsolicited response setting according to th  |
+|         |  e IntelliTeam Feeder Management System setup instructions.                            |
++---------+----------------------------------------------------------------------------------------+
+|  148    |  Leakage Current Check Error - On when one of the per pole Definite Time Delay elemen  |
+|         |  t for Open Vacuum Bottle Leakage detection algorithm has been satisfied. Otherwise o  |
+|         |  ff.                                                                                   |
++---------+----------------------------------------------------------------------------------------+
+|  149    |  Transfer Trip Enabled - On when the Transfer Trip state is enabled to allow the loca  |
+|         |  l device to send an Initiate Transfer Trip command to all non - zero RTU addresses i  |
+|         |  n the Remote Transfer Trip Transmit List ***Table after an Open and Lockout state be  |
+|         |  cause of a Protection or Automatic Sectionalizing event. Status point = 0x1F02.       |
++---------+----------------------------------------------------------------------------------------+
+|  150    |  Transfer Trip Prohibit Restoration Initiated - On when an Initiate Transfer Trip con  |
+|         |  trol point has been received and executed. Off when the Prohibit Restoration state i  |
+|         |  s no longer active and the control will be allowed to close by an automatic or manua  |
+|         |  l operation. Note: This status point only applies to devices not teamed with a DG so  |
+|         |  urce. When teamed with DG this status point will not get activated even if a Transfe  |
+|         |  r Trip command is initiated and executed. Status point = 0x021C                       |
++---------+----------------------------------------------------------------------------------------+
+|  151    |  Remote Prohibit Restoration Enabled from Local - On when the Enable Remote Transmit   |
+|         |  from Local P.R. setting is enabled on the local device. Status point = 0x1F03         |
++---------+----------------------------------------------------------------------------------------+
+|  152    |  Remote Prohibit Restoration Enabled from SCADA - On when the Enable Remote Transmit   |
+|         |  from SCADA P.R. setting is enabled on the local device. Status point = 0x1F04         |
++---------+----------------------------------------------------------------------------------------+
+|  153    |  DG Reconnect Delay Terminated - On when the DG Reconnect Delay Timer is aborted beca  |
+|         |  use of an abnormal system condition. The Transfer Trip Prohibit Restoration (TTPR) s  |
+|         |  tate remains active on the device and reconnecting the DG source back on the grid mu  |
+|         |  st be performed manually.                                                             |
++---------+----------------------------------------------------------------------------------------+
+|  154    |  Hot Line Tag External Trip - On when the Hot Line Tag mode activated by the External  |
+|         |   Interface Option command is active. Otherwise off.                                   |
++---------+----------------------------------------------------------------------------------------+
+|  155    |  External Interface Ground Trip Applied - On when the External Interface Ground Trip   |
+|         |  Block input is active. Otherwise off.                                                 |
++---------+----------------------------------------------------------------------------------------+
+|  156    |  External Interface Maintenance Mode Applied - On when the External Interface Mainten  |
+|         |  ance Mode input is active. Otherwise off. See the  User Commands section in 766 - 53  |
+|         |  0.                                                                                    |
++---------+----------------------------------------------------------------------------------------+
+|  ***    |  Table 2  -  Analog Input Points                                                       |
++---------+----------------------------------------------------------------------------------------+
+|  Code   |  Name - Definition                                                                     |
++---------+----------------------------------------------------------------------------------------+
+|  1      |  Voltage Pole 1X - Primary phase - to - ground or phase - to - phase (1X to 2X voltag  |
+|         |  e depending on setup) measured on Pole 1 Terminal X. Each count equals one Vac RMS.   |
++---------+----------------------------------------------------------------------------------------+
+|  2      |  Voltage Pole 2X - Primary phase - to - ground or phase - to - phase (2X to 3X voltag  |
+|         |  e depending on setup) measured on Pole 2 Terminal X. Each count equals one Vac RMS.   |
++---------+----------------------------------------------------------------------------------------+
+|  3      |  Voltage Pole 3X - Primary phase - to - ground or phase - to - phase (3X to 1X voltag  |
+|         |  e depending on setup) measured on Pole 3 Terminal X. Each count equals one Vac RMS.   |
++---------+----------------------------------------------------------------------------------------+
+|  4      |  Voltage Pole 1Y - Primary phase - to - ground or phase - to - phase (1Y to 2Y voltag  |
+|         |  e depending on setup) measured on Pole 1 Terminal Y. Each count equals one Vac RMS.   |
+|         |  Note: Because the IntelliRupter fault interrupter voltage sensors are high - impedan  |
+|         |  ce sensing devices they will indicate a presence of voltage on the Y side terminals   |
+|         |  when the optional disconnect is installed and open. The voltage reading is an artifa  |
+|         |  ct of leakage current resulting from parasitic capacitance. Therefore the readings c  |
+|         |  an be quite variable from unit to unit and pole to pole. Humidity and other weather   |
+|         |  related conditions add to the variability at a given unit.                            |
++---------+----------------------------------------------------------------------------------------+
+|  5      |  Voltage Pole 2Y - Primary phase - to - ground or phase - to - phase (2Y to 3Y voltag  |
+|         |  e depending on setup) measured on Pole 2 Terminal Y. Each count equals one Vac RMS.   |
++---------+----------------------------------------------------------------------------------------+
+|  6      |  Voltage Pole 3Y - Primary phase - to - ground or phase - to - phase (3Y to 1Y voltag  |
+|         |  e depending on setup) measured on Pole 3 Terminal Y. Each count equals one Vac RMS.   |
++---------+----------------------------------------------------------------------------------------+
+|  7      |  90% Voltage Reference Standard - A constant representing 90% of the full - scale val  |
+|         |  ue.                                                                                   |
++---------+----------------------------------------------------------------------------------------+
+|  8      |  0% Voltage Reference Standard - A constant representing the zero value.               |
++---------+----------------------------------------------------------------------------------------+
+|  9      |  Battery Voltage - Nominally 12 Vdc. If ac power is available the value is updated on  |
+|         |  ly during battery testing. If ac power is not available the value is continuously up  |
+|         |  dated. One count equals 0.0293 Vdc.                                                   |
++---------+----------------------------------------------------------------------------------------+
+|  10     |  Current Pole 1 - Single - phase true RMS current measured on Pole 1. Each count equa  |
+|         |  ls one ampere.                                                                        |
++---------+----------------------------------------------------------------------------------------+
+|  11     |  Current Pole 2 - Single - phase true RMS current measured on Pole 2. Each count equa  |
+|         |  ls one ampere.                                                                        |
++---------+----------------------------------------------------------------------------------------+
+|  12     |  Current Pole 3 - Single - phase true RMS current measured on Pole 3. Each count equa  |
+|         |  ls one ampere.                                                                        |
++---------+----------------------------------------------------------------------------------------+
+|  13     |  Residual Current - Vector sum of the fundamental power frequency currents on Pole 1   |
+|         |  Pole 2 and Pole 3. Each count equals one ampere.                                      |
++---------+----------------------------------------------------------------------------------------+
+|  14     |  Fault Current Pole 1 at Time of Trip - Current at time of trip for the last overcurr  |
+|         |  ent or tandem protective element that tripped and opened this pole regardless of whi  |
+|         |  ch phase caused the trip. Cleared when this pole is manually closed (by a local comm  |
+|         |  and a SCADA command or IntelliLink Remote command) or by issuing the Clear Trip Indi  |
+|         |  cators command (control point 44). Each count equals one ampere.                      |
++---------+----------------------------------------------------------------------------------------+
+|  15     |  Fault Current Pole 2 at Time of Trip - Current at time of trip for the last overcurr  |
+|         |  ent or tandem protective element that tripped and opened this pole regardless of whi  |
+|         |  ch phase caused the trip. Cleared when this pole is manually closed (by a local comm  |
+|         |  and a SCADA command or IntelliLink Remote command) or by issuing the Clear Trip Indi  |
+|         |  cators command (control point 44). Each count equals one ampere.                      |
++---------+----------------------------------------------------------------------------------------+
+|  16     |  Fault Current Pole 3 at Time of Trip - Current at time of trip for the last overcurr  |
+|         |  ent or tandem protective element that tripped and opened this pole regardless of whi  |
+|         |  ch phase caused the trip. Cleared when this pole is manually closed (by a local comm  |
+|         |  and a SCADA command or IntelliLink Remote command) or by issuing the Clear Trip Indi  |
+|         |  cators command (control point 44). Each count equals one ampere.                      |
++---------+----------------------------------------------------------------------------------------+
+|  17     |  kW Pole 1 - Single - phase kW on Pole 1 calculated using instantaneous voltage and c  |
+|         |  urrent and the respective voltage - current phase angle. Each count equals one kW.    |
++---------+----------------------------------------------------------------------------------------+
+|  18     |  kW Pole 2 - Single - phase kW on Pole 2 calculated using instantaneous voltage and c  |
+|         |  urrent and the respective voltage - current phase angle. Each count equals one kW.    |
++---------+----------------------------------------------------------------------------------------+
+|  19     |  kW Pole 3 - Single - phase kW on Pole 3 calculated using instantaneous voltage and c  |
+|         |  urrent and the respective voltage - current phase angle. Each count equals one kW.    |
++---------+----------------------------------------------------------------------------------------+
+|  20     |  Total kW - Sum of kW Pole 1 kW Pole 2 and kW Pole 3. Each count equals one kW.        |
++---------+----------------------------------------------------------------------------------------+
+|  21     |  kvar Pole 1 - Single - phase kvar on Pole 1 calculated using apparent power true pow  |
+|         |  er and phase angle. Each count equals one kvar.                                       |
++---------+----------------------------------------------------------------------------------------+
+|  22     |  kvar Pole 2 - Single - phase kvar on Pole 2 calculated using apparent power true pow  |
+|         |  er and phase angle. Each count equals one kvar.                                       |
++---------+----------------------------------------------------------------------------------------+
+|  23     |  kvar Pole 3 - Single - phase kvar on Pole 3 calculated using apparent power true pow  |
+|         |  er and phase angle. Each count equals one kvar.                                       |
++---------+----------------------------------------------------------------------------------------+
+|  24     |  Total kvar - Sum of kvar Pole 1 kvar Pole 2 and kvar Pole 3. Each count equals one k  |
+|         |  var.                                                                                  |
++---------+----------------------------------------------------------------------------------------+
+|  25     |  Power Factor Pole 1 - Single - phase power factor measured on Pole 1 reported as the  |
+|         |   cosine of the phase angle. Each count equals 0.001. For lagging angles the power fa  |
+|         |  ctor is reported as 0 to 2000 corresponding to angles from 180 to 0. For leading ang  |
+|         |  les the power factor is reported as 2000 to 0 corresponding to angles from  - 180 to  |
+|         |   0.                                                                                   |
++---------+----------------------------------------------------------------------------------------+
+|  26     |  Power Factor Pole 2 - Single - phase power factor measured on Pole 2 reported as the  |
+|         |   cosine of the phase angle. Each count equals 0.001. For lagging angles the power fa  |
+|         |  ctor is reported as 0 to 2000 corresponding to angles from 180 to 0. For leading ang  |
+|         |  les the power factor is reported as 2000 to 0 corresponding to angles from  - 180 to  |
+|         |   0.                                                                                   |
++---------+----------------------------------------------------------------------------------------+
+|  27     |  Power Factor Pole 3 - Single - phase power factor measured on Pole 3 reported as the  |
+|         |   cosine of the phase angle. Each count equals 0.001. For lagging angles the power fa  |
+|         |  ctor is reported as 0 to 2000 corresponding to angles from 180 to 0. For leading ang  |
+|         |  les the power factor is reported as 2000 to 0 corresponding to angles from  - 180 to  |
+|         |   0.                                                                                   |
++---------+----------------------------------------------------------------------------------------+
+|  28     |  Power Factor Angle of Pole 1 - Angle cosine that is the power factor. Each count equ  |
+|         |  als one - eighth of a degree.                                                         |
++---------+----------------------------------------------------------------------------------------+
+|  29     |  Power Factor Angle of Pole 2 - Angle cosine that is the power factor. Each count equ  |
+|         |  als one - eighth of a degree.                                                         |
++---------+----------------------------------------------------------------------------------------+
+|  30     |  Power Factor Angle of Pole 3 - Angle cosine that is the power factor. Each count equ  |
+|         |  als one - eighth of a degree.                                                         |
++---------+----------------------------------------------------------------------------------------+
+|  31     |  Total Harmonic Distortion - Pole 1 X Side Voltage - Each count equals 0.1%.           |
++---------+----------------------------------------------------------------------------------------+
+|  32     |  Total Harmonic Distortion - Pole 2 X Side Voltage - Each count equals 0.1%.           |
++---------+----------------------------------------------------------------------------------------+
+|  33     |  Total Harmonic Distortion - Pole 3 X Side Voltage - Each count equals 0.1%.           |
++---------+----------------------------------------------------------------------------------------+
+|  34     |  Total Harmonic Distortion - Pole 1 Y Side Voltage - Each count equals 0.1%.           |
++---------+----------------------------------------------------------------------------------------+
+|  35     |  Total Harmonic Distortion - Pole 2 Y Side Voltage - Each count equals 0.1%.           |
++---------+----------------------------------------------------------------------------------------+
+|  36     |  Total Harmonic Distortion - Pole 3 Y Side Voltage - Each count equals 0.1%.           |
++---------+----------------------------------------------------------------------------------------+
+|  37     |  Total Harmonic Distortion - Pole 1 Current - Each count equals 0.1%.                  |
++---------+----------------------------------------------------------------------------------------+
+|  38     |  Total Harmonic Distortion - Pole 2 Current - Each count equals 0.1%.                  |
++---------+----------------------------------------------------------------------------------------+
+|  39     |  Total Harmonic Distortion - Pole 3 Current - Each count equals 0.1%.                  |
++---------+----------------------------------------------------------------------------------------+
+|  40     |  Line Frequency - Each count equals 0.01 Hz.                                           |
++---------+----------------------------------------------------------------------------------------+
+|  41     |  Temperature - The most recent temperature reading. Each count equals one degree Fahr  |
+|         |  enheit.                                                                               |
++---------+----------------------------------------------------------------------------------------+
+|  42     |  Number of Pole 1 Opening Operations - Number of interrupter operations on Pole 1 inc  |
+|         |  remented on each Open operation.                                                      |
++---------+----------------------------------------------------------------------------------------+
+|  43     |  Number of Pole 2 Opening Operations - Number of interrupter operations on Pole 2 inc  |
+|         |  remented on each Open operation.                                                      |
++---------+----------------------------------------------------------------------------------------+
+|  44     |  Number of Pole 3 Opening Operations - Number of interrupter operations on Pole 3 inc  |
+|         |  remented on each Open operation.                                                      |
++---------+----------------------------------------------------------------------------------------+
+|  45     |  Number of Pole 1 Closing Operations - Number of interrupter operations on Pole 1 inc  |
+|         |  remented on each Close operation.                                                     |
++---------+----------------------------------------------------------------------------------------+
+|  46     |  Number of Pole 2 Closing Operations - Number of interrupter operations on Pole 2 inc  |
+|         |  remented on each Close operation.                                                     |
++---------+----------------------------------------------------------------------------------------+
+|  47     |  Number of Pole 3 Closing Operations - Number of interrupter operations on Pole 3 inc  |
+|         |  remented on each Close operation.                                                     |
++---------+----------------------------------------------------------------------------------------+
+|  48     |  Number of Pole 1 Pulse Operations - Number of interrupter operations on Pole 1 incre  |
+|         |  mented on each operation using PulseCloseing Technology.                              |
++---------+----------------------------------------------------------------------------------------+
+|  49     |  Number of Pole 2 Pulse Operations - Number of interrupter operations on Pole 2 incre  |
+|         |  mented on each operation using PulseCloseing Technology.                              |
++---------+----------------------------------------------------------------------------------------+
+|  50     |  Number of Pole 3 Pulse Operations - Number of interrupter operations on Pole 3 incre  |
+|         |  mented on each operation using PulseCloseing Technology.                              |
++---------+----------------------------------------------------------------------------------------+
+|  51     |  Phase Angle X Side Voltage to Y Side Voltage Pole 1 - Phase angle in degrees between  |
+|         |   the X side and Y side voltage signals. A positive value indicates that the X side i  |
+|         |  s leading. Each count equals one - eighth degree.                                     |
++---------+----------------------------------------------------------------------------------------+
+|  52     |  Phase Angle X Side Voltage to Y Side Voltage Pole 2 - Phase angle in degrees between  |
+|         |   the X side and Y side voltage signals. A positive value indicates that the X side i  |
+|         |  s leading. Each count equals one - eighth degree.                                     |
++---------+----------------------------------------------------------------------------------------+
+|  53     |  Phase Angle X Side Voltage to Y Side Voltage Pole 3 - Phase angle in degrees between  |
+|         |   the X side and Y side voltage signals. A positive value indicates that the X side i  |
+|         |  s leading. Each count equals one - eighth degree.                                     |
++---------+----------------------------------------------------------------------------------------+
+|  54     |  Analog Communication Test - Displays the value sent to analog output point 5. The in  |
+|         |  itial state at powerup is zero.                                                       |
++---------+----------------------------------------------------------------------------------------+
+|  55     |  Total kVA - Sum of kVA Pole 1 kVA Pole 2 and kVA Pole 3. Each count equals one kVA.   |
++---------+----------------------------------------------------------------------------------------+
+|  56     |  Total Power Factor - Sum of kW Pole 1 kW Pole 2 and kW Pole 3 divided by the sum of   |
+|         |  kVA Pole 1 kVA Pole 2 and kVA Pole 3. Each count equals 0.001 with a 1000 offset (0   |
+|         |  =  - 1.0 PF 1000 = 0.0 PF 2000 = 1.0 PF).                                             |
++---------+----------------------------------------------------------------------------------------+
+|  57     |  Latched Overcurrent Pole 1 - Current at time of trip for the last overcurrent or tan  |
+|         |  dem protective element that tripped and opened this pole including a Sectionalizing   |
+|         |  trip regardless of which phase caused the trip. Cleared when this pole is manually c  |
+|         |  losed (by a local command a SCADA command or IntelliLink software command) or by iss  |
+|         |  uing a Clear Trip Indicators (control point 44) command. Each count equals one amper  |
+|         |  e.                                                                                    |
++---------+----------------------------------------------------------------------------------------+
+|  58     |  Latched Overcurrent Pole 2 - Current at time of trip for the last overcurrent or tan  |
+|         |  dem protective element that tripped and opened this pole including a Sectionalizing   |
+|         |  trip regardless of which phase caused the trip. Cleared when this pole is manually C  |
+|         |  losed (by a local command a SCADA command or IntelliLink software command) or by iss  |
+|         |  uing a Clear Trip Indicators (control point 44) command. Each count equals one amper  |
+|         |  e.                                                                                    |
++---------+----------------------------------------------------------------------------------------+
+|  59     |  Latched Overcurrent Pole 3 - Current at time of trip for the last overcurrent or tan  |
+|         |  dem protective element that tripped and opened this pole including a Sectionalizing   |
+|         |  trip regardless of which phase caused the trip. Cleared when this pole is manually C  |
+|         |  losed (by a local command a SCADA command or IntelliLink software command) or by iss  |
+|         |  uing a Clear Trip Indicators (control point 44) command. Each count equals one amper  |
+|         |  e.                                                                                    |
++---------+----------------------------------------------------------------------------------------+
+|  60     |  Delta Frequency - The difference in frequency between the X and Y sides. Reports X f  |
+|         |  requency minus Y frequency. Therefore a positive value indicates higher frequency on  |
+|         |   the X side and a negative value indicates higher frequency on the Y side. Each coun  |
+|         |  t equals 0.01 Hz.                                                                     |
++---------+----------------------------------------------------------------------------------------+
+|  61     |  Averaged Current Pole 1 - Single - phase time - averaged current measured on Pole 1.  |
+|         |   30 samples are averaged for the last 15 minutes and each count equals one ampere. W  |
+|         |  hen the Open - Source Sectionalizing element is set to the Yes setting IntelliTeam S  |
+|         |  G or Loops Only the current average will latch when the IntelliRupter fault interrup  |
+|         |  ter is closed and the voltage has dropped below the Open Source Voltage Threshold se  |
+|         |  tpoint. It will remain latched while the Open -  Source Sectionalizing element is ti  |
+|         |  ming. If the Open - Source Sectionalizing element trips it will remain latched until  |
+|         |   the trip indication is cleared by closing the IntelliRupter fault interrupter or co  |
+|         |  ntrol point 44 is received. When the latch is cleared the average current will resum  |
+|         |  e averaging from the latched value. Otherwise the current average will update normal  |
+|         |  ly. When the Open - Source Sectionalizing element is set to the No setting samples w  |
+|         |  ill be collected when the IntelliRupter fault interrupter is open or closed. This va  |
+|         |  lue updates each time a new sample is processed and will never be latched.            |
++---------+----------------------------------------------------------------------------------------+
+|  62     |  Averaged Current Pole 2 - Single - phase time - averaged current measured on Pole 2.  |
+|         |   Same as Analog Input Point 61.                                                       |
++---------+----------------------------------------------------------------------------------------+
+|  63     |  Averaged Current Pole 3 - Single - phase time - averaged current measured on Pole 3.  |
+|         |   Same as Analog Input Point 61.                                                       |
++---------+----------------------------------------------------------------------------------------+
+|  64     |  Averaged Residual Current - Vector sum of the fundamental power - frequency current   |
+|         |  on Poles 12 and 3. 30 samples are averaged for the last 15 minutes and each count eq  |
+|         |  uals one ampere. When the Open - Source Sectionalizing feature is set to the Yes Int  |
+|         |  elliTeam SG or Loops Only setting the current average will latch when the IntelliRup  |
+|         |  ter fault interrupter is closed and the voltage has dropped below the Open Source Vo  |
+|         |  ltage Threshold setting. It will remain latched while the Open - Source Sectionalizi  |
+|         |  ng Element is timing. If the Open - Source Sectionalizing Element trips it will rema  |
+|         |  in latched until the trip indication is cleared by closing the IntelliRupter fault i  |
+|         |  nterrupter or control point 44 is received. When the latch is cleared the average cu  |
+|         |  rrent will resume averaging from the latched value. Otherwise the current average wi  |
+|         |  ll be updating. When the Open - Source Sectionalizing feature is set to the No setti  |
+|         |  ng samples will be collected when the IntelliRupter fault interrupter is open or clo  |
+|         |  sed. This value will update each time a new sample is processed and will not be latc  |
+|         |  hed.                                                                                  |
++---------+----------------------------------------------------------------------------------------+
+|  65     |  Fault Current Ground Time of Trip - This is the ground current at time of trip for t  |
+|         |  he last ground overcurrent or tandem protective element that tripped. Cleared when t  |
+|         |  he tripped pole or poles are manually closed (locally via SCADA or IntelliLink Remot  |
+|         |  e) or by issuing a Clear Trip Indicators (Control Point 44) command. Each count equa  |
+|         |  ls one ampere.                                                                        |
++---------+----------------------------------------------------------------------------------------+
+|  66     |  Leakage Current Time Pole 1 - This shows the accumulated time for the Pole 1 Definit  |
+|         |  e Time Delay element for the Open Vacuum Bottle Leakage detection algorithm.          |
++---------+----------------------------------------------------------------------------------------+
+|  67     |  Leakage Current Time Pole 2 - This shows the accumulated time for the Pole 2 Definit  |
+|         |  e Time Delay element for the Open Vacuum Bottle Leakage detection algorithm.          |
++---------+----------------------------------------------------------------------------------------+
+|  68     |  Leakage Current Time Pole 3 - This shows the accumulated time for the Pole 3 Definit  |
+|         |  e Time Delay element for the Open Vacuum Bottle Leakage detection algorithm.          |
++---------+----------------------------------------------------------------------------------------+
+|  ***    |  Table 3  -  Analog Output Points                                                      |
++---------+----------------------------------------------------------------------------------------+
+|  Code   |  Name - Definition                                                                     |
++---------+----------------------------------------------------------------------------------------+
+|  1      |  Application Layer Confirmation Retry Time - Time (100 to 65535 ms.) the IntelliRupte  |
+|         |  r fault interrupter will wait for an application layer confirmation to an event resp  |
+|         |  onse message before resending the request for confirmation.â‘                         |
++---------+----------------------------------------------------------------------------------------+
+|  2      |  Application Layer Confirmation Retry Count - Number of times (0 to 10) the IntelliRu  |
+|         |  pter fault interrupter will send an event response message if a confirmation is not   |
+|         |  received.                                                                             |
++---------+----------------------------------------------------------------------------------------+
+|  3      |  Control Point Select Time - During a select - before - operate procedure the time (1  |
+|         |  0 to 1000 tenths of a second) allowed to elapse between receiving the select functio  |
+|         |  n for a point and receiving the operate function for it. If an operate function is n  |
+|         |  ot received within this period the point is un - selected; another select function i  |
+|         |  s required before the point will operate.                                             |
++---------+----------------------------------------------------------------------------------------+
+|  4      |  Real - Time Feeder Loading - Total averaged three - phase feeder loading (in amperes  |
+|         |  ) measured at the source breaker. This value is used to determine if the load can be  |
+|         |   transferred to another source. Each count equals one ampere.                         |
++---------+----------------------------------------------------------------------------------------+
+|  5      |  Analog Communication Test - Accepts a value that reports back through analog input p  |
+|         |  oint 54.                                                                              |
++---------+----------------------------------------------------------------------------------------+
+|  ***    |  Table 4  -  Control Points                                                            |
++---------+----------------------------------------------------------------------------------------+
+|  Code   |  Name - Definition                                                                     |
++---------+----------------------------------------------------------------------------------------+
+|  1      |  Open IntelliRupter Fault Interrupter - SCADA - This command opens all closed poles.   |
++---------+----------------------------------------------------------------------------------------+
+|  2      |  Close IntelliRupter Fault Interrupter - SCADA - This command closes all open poles.   |
++---------+----------------------------------------------------------------------------------------+
+|  3      |  General Profile 1 - SCADA - Enables General Profile 1.                                |
++---------+----------------------------------------------------------------------------------------+
+|  4      |  General Profile 2 - SCADA - Enables General Profile 2.                                |
++---------+----------------------------------------------------------------------------------------+
+|  5      |  General Profile 3 - SCADA - Enables General Profile 3.                                |
++---------+----------------------------------------------------------------------------------------+
+|  6      |  General Profile 4 - SCADA - Enables General Profile 4.                                |
++---------+----------------------------------------------------------------------------------------+
+|  7      |  Enable/Disable Hot Line Tag - SCADA - Enables or disables the Hot Line Tag profile.   |
++---------+----------------------------------------------------------------------------------------+
+|  8      |  Reserved.                                                                             |
++---------+----------------------------------------------------------------------------------------+
+|  9      |  Start Battery Test - SCADA - Begins a battery test cycle. If ac power is available t  |
+|         |  he battery charger is disconnected for several minutes during the test. If ac power   |
+|         |  is not available a brief impedance test is used to evaluate the battery condition.    |
++---------+----------------------------------------------------------------------------------------+
+|  10     |  Clear Errors - SCADA - Clears all error flags. Alarms and warnings are not affected.  |
++---------+----------------------------------------------------------------------------------------+
+|  11     |  Enable/Block Ground Trip - Enables or blocks the Ground Trip feature.                 |
++---------+----------------------------------------------------------------------------------------+
+|  12     |  Enable/Block Sensitive Earth Trip - Enables or blocks the Sensitive Earth Trip featu  |
+|         |  re.                                                                                   |
++---------+----------------------------------------------------------------------------------------+
+|  13     |  Enable/Block Circuit Testing - Enables or blocks the Circuit Testing feature.         |
++---------+----------------------------------------------------------------------------------------+
+|  14     |  Reserved.                                                                             |
++---------+----------------------------------------------------------------------------------------+
+|  15     |  Enable/Block Test on Backfeed - Enables or blocks the Test on Backfeed feature.       |
++---------+----------------------------------------------------------------------------------------+
+|  16     |  Reserved.                                                                             |
++---------+----------------------------------------------------------------------------------------+
+|  17     |  Turn On/Off Second Closing Profile - Enables or blocks the Second Closing profile.    |
++---------+----------------------------------------------------------------------------------------+
+|  18     |  Reserved.                                                                             |
++---------+----------------------------------------------------------------------------------------+
+|  19     |  Execute Waveform Capture - This command initiates a waveform capture. It can also be  |
+|         |   issued by the button on the Log Management screen.                                   |
++---------+----------------------------------------------------------------------------------------+
+|  20     |  Wi - Fi Test - Activates the Wi - Fi beacon transmitter for troubleshooting purposes  |
+|         |  .                                                                                     |
++---------+----------------------------------------------------------------------------------------+
+|  21     |  Clear Wi - Fi Intrusion Alarm - Clears an active Wi - Fi Intrusion alarm.             |
++---------+----------------------------------------------------------------------------------------+
+|  22     |  IntelliTeam Prohibit Restoration - Prevents the IntelliRupter fault interrupter and   |
+|         |  other devices in any team in which this IntelliRupter fault interrupter is a member   |
+|         |  from automatically closing to restore load.                                           |
++---------+----------------------------------------------------------------------------------------+
+|  23     |  IntelliTeam Clear Manual Operation - SCADA - Clearing the manual operation allows th  |
+|         |  e IntelliTeam system to return to the Ready state provided the IntelliRupter fault i  |
+|         |  nterrupter contacts are in the correct IntelliTeam Normally Open or Normally Closed   |
+|         |  state.                                                                                |
++---------+----------------------------------------------------------------------------------------+
+|  24     |  Open/Close IntelliRupter Fault Interrupter - SCADA - When the Open or Closed state o  |
+|         |  f the poles is mismatched an Open command will open all poles or a Close command wil  |
+|         |  l close all poles. If SCADA sends this command without specifying  Open  or  Close    |
+|         |  the IntelliRupter fault interrupter will ignore it.                                   |
++---------+----------------------------------------------------------------------------------------+
+|  25     |  Enable/Disable Loop Restoration - SCADA - Enables or disables Loop Restoration funct  |
+|         |  ionality.                                                                             |
++---------+----------------------------------------------------------------------------------------+
+|  26     |  Enable/Block Single Phase Operation - SCADA - When enabled it allows Single - Phase   |
+|         |  commands and Automatic operation according to the active General Profile configurati  |
+|         |  on. When blocked all automatic operations or SCADA commands will be executed three -  |
+|         |   phase and any Single - Phase SCADA command will be rejected.                         |
++---------+----------------------------------------------------------------------------------------+
+|  27     |  Open Pole 1 - SCADA - This command opens only Pole 1.                                 |
++---------+----------------------------------------------------------------------------------------+
+|  28     |  Open Pole 2 - SCADA - This command opens only Pole 2.                                 |
++---------+----------------------------------------------------------------------------------------+
+|  29     |  Open Pole 3 - SCADA - This command opens only Pole 3.                                 |
++---------+----------------------------------------------------------------------------------------+
+|  30     |  Close Pole 1 - SCADA - This command closes only Pole 1.                               |
++---------+----------------------------------------------------------------------------------------+
+|  31     |  Close Pole 2 - SCADA - This command closes only Pole 2.                               |
++---------+----------------------------------------------------------------------------------------+
+|  32     |  Close Pole 3 - SCADA - This command closes only Pole 3.                               |
++---------+----------------------------------------------------------------------------------------+
+|  33     |  Open/Close Pole 1 - SCADA - This single command opens or closes only Pole 1.          |
++---------+----------------------------------------------------------------------------------------+
+|  34     |  Open/Close Pole 2 - SCADA - This single command opens or closes only Pole 2.          |
++---------+----------------------------------------------------------------------------------------+
+|  35     |  Open/Close Pole 3 - SCADA - This single command opens or closes only Pole 3.          |
++---------+----------------------------------------------------------------------------------------+
+|  36     |  Netlist Propagation Enable/Disable - In the Enabled state allows new Netlist request  |
+|         |  s and Netlist transmissions. In the Disabled state multiple downloads of a Netlist c  |
+|         |  an be sent to a local control. (Starting with Revision 7.1.x the Netlist Propagation  |
+|         |   mode is always in the Enabled state therefore this control point does not operate.)  |
++---------+----------------------------------------------------------------------------------------+
+|  37     |  PulseClose Test - This command initiates a three - phase test using PulseClosing Tec  |
+|         |  hnology. This command forces an operation where a pulse tests the line regardless of  |
+|         |   the cross - pole voltage or the state of the Test on Backfeed control. When the tes  |
+|         |  t is executed a PulseTest operation is followed by a Close operation if a fault is n  |
+|         |  ot detected. The Close operation executes without point - on - wave control.          |
++---------+----------------------------------------------------------------------------------------+
+|  38     |  PulseClose Test Pole 1 - This command initiates a single - phase test using PulseClo  |
+|         |  sing Technology on pole 1 only. This command forces an operation where a pulse tests  |
+|         |   the line regardless of the cross - pole voltage or the state of the Test on Backfee  |
+|         |  d control. When the test is executed an operation where a pulse tests the line is fo  |
+|         |  llowed by a Close operation if a fault is not detected. The Close operation executes  |
+|         |   without point - on - wave control.                                                   |
++---------+----------------------------------------------------------------------------------------+
+|  39     |  PulseClose Test Pole 2 - This command initiates a single - phase test using PulseClo  |
+|         |  sing Technology on pole 2 only. This command forces an operation where a pulse tests  |
+|         |   the line regardless of the cross - pole voltage or the state of the Test on Backfee  |
+|         |  d control. When the test is executed an operation where a pulse tests the line is fo  |
+|         |  llowed by a Close operation if a fault is not detected. The Close operation executes  |
+|         |   without point - on - wave control.                                                   |
++---------+----------------------------------------------------------------------------------------+
+|  40     |  PulseClose Test Pole 3 - This command initiates a single - phase test using PulseClo  |
+|         |  sing Technology on pole 3 only. This command forces an operation where a pulse tests  |
+|         |   the line regardless of the cross - pole voltage or the state of the Test on Backfee  |
+|         |  d control. When the test is executed an operation where a pulse tests the line is fo  |
+|         |  llowed by a Close operation if a fault is not detected. The Close operation executes  |
+|         |   without point - on - wave control.                                                   |
++---------+----------------------------------------------------------------------------------------+
+|  41     |  Communication Test - This command changes the state of the Communication Test status  |
+|         |   point 99 each time the control point 41 message is received.                         |
++---------+----------------------------------------------------------------------------------------+
+|  42     |  Wi - Fi Disable - This command disables local Wi - Fi communication.                  |
++---------+----------------------------------------------------------------------------------------+
+|  43     |  Wi - Fi Enable - This command enables local Wi - Fi communication.                    |
++---------+----------------------------------------------------------------------------------------+
+|  44     |  Clear Trip Indicators  -  This command clears the points listed below if they are se  |
+|         |  t when it is received.                                                                |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  ***Status Points Cleared***                                                           |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  31 - Trip on Loss of EnergyTrip on Loss of Energy                                     |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  35 - Overcurrent Current Trip Pole 1Overcurrent Current Trip Pole 1                   |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  36 - Overcurrent Current Trip Pole 2Overcurrent Current Trip Pole 2                   |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  37 - Overcurrent Current Trip Pole 3Overcurrent Current Trip Pole 3                   |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  38 - Overcurrent Trip Any PoleOvercurrent Trip Any Pole                               |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  39 - Tripped to LockoutTripped to Lockout                                             |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  41 - Voltage TripVoltage Trip                                                         |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  43 - Frequency TripFrequency Trip                                                     |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  45 - Sectionalizing TripSectionalizing Trip                                           |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  54 - Close Blocked by Synch CheckClose Blocked by Synch Check                         |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  55 - Pulse Detected a FaultPulse Detected a Fault                                     |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  61 - IntelliTeam Fault Pole 1IntelliTeam Fault Pole 1                                 |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  62 - IntelliTeam Fault Pole 2IntelliTeam Fault Pole 2                                 |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  63 - IntelliTeam Fault Pole 3IntelliTeam Fault Pole 3                                 |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  77 - Overcurrent Trip - Sensitive Earth FaultOvercurrent Trip - Sensitive Earth Faul  |
+|         |  t                                                                                     |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  78 - Tripped to Lockout SEF Tripped to Lockout SEF                                    |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  85 - Close Blocked Pulse UnavailableClose Blocked Pulse Unavailable                   |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  88 - Tripped to Lockout - Pole 1Tripped to Lockout - Pole 1                           |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  89 - Tripped to Lockout - Pole 2Tripped to Lockout - Pole 2                           |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  90 - Tripped to Lockout - Pole 3Tripped to Lockout - Pole 3                           |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  91 - Pulse Detected Fault - Pole 1 Pulse Detected Fault - Pole 1                      |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  92 - Pulse Detected Fault - Pole 2 Pulse Detected Fault - Pole 2                      |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  93 - Pulse Detected Fault - Pole 3 Pulse Detected Fault - Pole 3                      |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  111 - Close Blocked Insufficient EnergyClose Blocked Insufficient Energy              |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  115 - Ground Overcurrernt TripGround Overcurrernt Trip                                |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  116 - Negative Sequence Overcurrent TripNegative Sequence Overcurrent Trip            |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  117 - Definite Time Overcurrent Trip                                                  |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  119 - Overcurrent Fault DetectedOvercurrent Fault Detected                            |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  121 - LoopRest Cls Blkd UnderFreqLoopRest Cls Blkd UnderFreq                          |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  122 - Any Automatic Timer in ProgressAny Automatic Timer in Progress                  |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  ***Analog Input Points Set To Zero***                                                 |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  14 - Fault Current Pole 1 Time of Trip                                                |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  15 - Fault Current Pole 2 Time of Trip                                                |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  16 - Fault Current Pole 3 Time of Trip                                                |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  57 - Latched Overcurrent Pole 1                                                       |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  58 - Latched Overcurrent Pole 2                                                       |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  59 - Latched Overcurrent Pole 3                                                       |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  61 - Averaged Current Pole 1                                                          |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  62 - Averaged Current Pole 2                                                          |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  63 - Averaged Current Pole 3                                                          |
++---------+----------------------------------------------------------------------------------------+
+|   >>44  |  64 - Averaged Residual Current                                                        |
++---------+----------------------------------------------------------------------------------------+
+|  45     |  Wi - Fi Enable/Disable - Toggles the state of local Wi - Fi communication.            |
++---------+----------------------------------------------------------------------------------------+
+|  46     |  Clear Latched Overcurrent Status - Clears the Latch Overcurrent status point 119 if   |
+|         |  it is set when this command is received.                                              |
++---------+----------------------------------------------------------------------------------------+
+|  47     |  Clear Warnings - SCADA - Clears all warning flags. Errors and alarms are not affecte  |
+|         |  d. The Active Warnings function will reassert in approximately one second.            |
++---------+----------------------------------------------------------------------------------------+
+|  48     |  Clear Alarms - SCADA - Clears all alarm flags. Errors and warnings are not affected.  |
+|         |   The Active Alarms function will reassert in approximately one second.                |
++---------+----------------------------------------------------------------------------------------+
+|  49     |  Pulse Test - This command initiates a three - phase test using PulseClosing Technolo  |
+|         |  gy which executes a point - on - wave pulse and inverse pulse to evaluate the line.   |
+|         |  The interrupters will remain open at the end of the test. No action is taken when th  |
+|         |  e test does not find a fault. When a fault is detected by both pulses the message  F  |
+|         |  ault - Pulseclosing  is displayed on the Operation screen and the corresponding stat  |
+|         |  us points 559192 and 93 are set.                                                      |
++---------+----------------------------------------------------------------------------------------+
+|  50     |  Pulse Test Pole 1 - This command initiates a single - phase test using PulseClosing   |
+|         |  Technology on pole 1 that executes a point - on - wave pulse and inverse pulse. The   |
+|         |  interrupter will remain open at the end of the test. See control point 49 for fault   |
+|         |  indications.                                                                          |
++---------+----------------------------------------------------------------------------------------+
+|  51     |  Pulse Test Pole 2 - This command initiates a single - phase test using PulseClosing   |
+|         |  Technology on pole 2 that executes a point - on - wave pulse and inverse pulse. The   |
+|         |  interrupter will remain open at the end of the test. See control point 49 for fault   |
+|         |  indications.                                                                          |
++---------+----------------------------------------------------------------------------------------+
+|  52     |  Pulse Test Pole 3 - This command initiates a single - phase test using PulseClosing   |
+|         |  Technology on pole 3 that executes a point - on - wave pulse and inverse pulse. The   |
+|         |  interrupter will remain open at the end of the test. See control point 49 for fault   |
+|         |  indications.                                                                          |
++---------+----------------------------------------------------------------------------------------+
+|  53     |  Enable/Block Open Source Sectionalizing - When the Open - Source Sectionalizing elem  |
+|         |  ent is set to the Yes IntelliTeam SG or Loop Only setting this command will enable o  |
+|         |  r disable the Open - Source Sectionalizing element. When the Open - Source Sectional  |
+|         |  izing element is set to the Yes IntelliTeam SG or Loop Only setting the Open - Sourc  |
+|         |  e Sectionalizing element will default to enabled after a control restart.             |
++---------+----------------------------------------------------------------------------------------+
+|  54     |  Clear IntelliLink Intrusion - This command clears the IntelliLink Intrusion status p  |
+|         |  oint.                                                                                 |
++---------+----------------------------------------------------------------------------------------+
+|  55     |  Clear Remote PR Status - This command clears the Prohibit Restoration Remotely Trans  |
+|         |  mitted status point. Control point = 0x1F00                                           |
++---------+----------------------------------------------------------------------------------------+
+|  56     |  Clear Remote Enable Restoration Status - This command clears the Enable Restoration   |
+|         |  Remotely Transmitted status point. Control point = 0x1F01                             |
++---------+----------------------------------------------------------------------------------------+
+|  57     |  Remote Transmit Enable Restoration - When received the device clears the Prohibit Re  |
+|         |  storation state locally (only if Hot Line Tag Frequency Trip or Manual Operation sta  |
+|         |  tes are not active) and then sends a Clear Prohibit Restoration command to all devic  |
+|         |  es in the Remote Prohibit Restoration Transmit List ***Table. The Enable Remote Tran  |
+|         |  smit from SCADA P.R. setting must be enabled to perform this action. Control point =  |
+|         |   0x1F02                                                                               |
++---------+----------------------------------------------------------------------------------------+
+|  58     |  Initiate Transfer Trip - This command sets the Transfer Trip state on a single devic  |
+|         |  e. The device issues a command to Open the switch in Automatic mode (not a manual op  |
+|         |  eration) and verifies the operation. If an Open state is confirmed the device then a  |
+|         |  ctivates the Prohibit Restoration state on the team facing the DG source (unless it   |
+|         |  ™s a DG team) to prevent restoration of that line segment. For the Prohibit Restorat  |
+|         |  ion state to be set the receiving device must be an S&C switch control that is part   |
+|         |  of an IntelliTeam SG system. SW1 = 0x202 SW2 = 0x203                                  |
++---------+----------------------------------------------------------------------------------------+
+|  59     |  Enable/Disable Transfer Trip - When enabled the local device sends an Initiate Trans  |
+|         |  fer Trip command to all non - zero RTU addresses in the Remote Transfer Trip Transmi  |
+|         |  t List ***Table when placed in an Open and Lockout state because of a Protection or   |
+|         |  Automatic Sectionalizing event. When disabled no condition will result in sending an  |
+|         |   Initiate Transfer Trip command to remote devices. Control point = 0x1F03             |
++---------+----------------------------------------------------------------------------------------+
+|  60     |  Enable/Disable Remote PR from Local - When enabled a local Prohibit Restoration comm  |
+|         |  and (via the front panel or IntelliLink software screen) will place the device in a   |
+|         |  Prohibit Restoration state and then transmit the Prohibit Restoration command to all  |
+|         |   devices in the Remote Prohibit Restoration Transmit list. Control point = 0x1F04     |
++---------+----------------------------------------------------------------------------------------+
+|  61     |  Enable/Disable Remote PR from SCADA - When enabled the device will enter a Prohibit   |
+|         |  Restoration state and then transmit a Prohibit Restoration command to all devices in  |
+|         |   the Remote Prohibit Restoration Transmit list if any the following states are activ  |
+|         |  e: Hot Line Tag Frequency Trip or Manual Operation or if the Prohibit Restoration st  |
+|         |  ate is activated from a SCADA command. Control point = 0x1F05                         |
+====================================================================================================
