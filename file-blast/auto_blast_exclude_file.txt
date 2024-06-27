@@ -1,0 +1,55 @@
+# Exclude specific server-related files
+.DCOPserver*
+.ICEauthority
+.Xauthority
+.autorun.lck
+
+# Exclude user configuration and history files
+#.bash_logout  # Uncomment if you want to exclude .bash_logout
+#.bash_profile # Uncomment if you want to exclude .bash_profile
+#.bashrc       # Uncomment if you want to exclude .bashrc
+.canna
+.config
+.dmrc
+.eggcups
+.emacs
+.fonts.cache-1
+.fonts.conf
+.gconf
+.gconfd
+.gnome
+.gnome2
+.gnome2_private
+.gtkrc
+.history
+.inputrc
+.kde
+.ksh_logout
+.local
+.mcop
+.mcoprc
+.metacity
+.rhn-applet.conf
+.sh_history
+.ssh
+.xemacs
+#.zshrc       # Uncomment if you want to exclude .zshrc
+
+# Exclude desktop environment-related files and directories
+Desktop*
+
+# Exclude specific system directories
+bus
+
+# Exclude files with certain extensions and patterns
+*.B[1-9]*   # Files matching the pattern *.B1, *.B2, ..., *.B9
+*.gz        # Compressed files
+*.old       # Backup files
+*.orig      # Original files
+*.original  # Original files
+*.rpmsave   # RPM save files
+*.save      # Save files
+*.sav       # Save files
+*.tar       # Tar archives
+*.tgz       # Compressed tar archives
+*.zip       # Zip archives
